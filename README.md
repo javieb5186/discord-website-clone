@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Getting Started
 
 First, run the development server:
 
@@ -20,17 +20,48 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Git Branch Naming Convention
 
-To learn more about Next.js, take a look at the following resources:
+The branch naming rules in this project is following a guide from [medium.com](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534) by Abhay Amin
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Basic Rules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Lowercase and Hyphen-separated
+- Alphanumeric Characters
+- No Continuous Hyphens
+- No Trailing Hyphens
+- Descriptive
 
-## Deploy on Vercel
+### Branch Prefix Names
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- feature
+- bugfix
+- hotfix
+- release
+- docs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Examples
+
+- feature/login-system
+- bugfix/header-styling
+- hotfix/critical-security-issue
+- release/v1.0.1
+- docs/api-endpoints
+
+# Project File Structure
+
+The project structure will follow [nextjs](https://nextjs.org/docs/getting-started/project-structure) official documention project structure.
+
+It will follow React JS guide second by [medium.com](https://medium.com/@kthamodaran/react-8-best-practices-folder-structure-5dbda48a69e) by Thamodaran.
+
+### React JS Convention
+
+The following convention will be used from Thamodarans guide...
+
+- Feature/Component Centric
+- Focus on common modules
+- Add custom components in folders
+- Create custom hooks
+- Use absolute imports
+- Avoid a single context for everything
+- Seperate business logic from UI
