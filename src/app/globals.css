@@ -19,8 +19,18 @@ a {
   text-decoration: none;
 }
 
+.desktop-screen {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 4rem;
+}
+
+.mobile-screen {
+  width: 90vw;
+}
+
 .black-txt {
-  color: black;
+  color: black !important;
 }
 
 .white-txt {

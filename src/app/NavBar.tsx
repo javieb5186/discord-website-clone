@@ -1,7 +1,8 @@
-import { Stack, Grid, Typography, Link } from "@mui/material";
+import { Stack, Grid, Typography, Box } from "@mui/material";
 import DiscordIcon from "icons/DiscordIcon";
 import { LinkButton } from "components";
 import { SimpleLink } from "components";
+import { RBox } from "components";
 
 export default function NavBar() {
   // links to be generated with text and href for href attribute
@@ -37,8 +38,8 @@ export default function NavBar() {
     },
   ];
   return (
-    <header style={{ backgroundColor: "#5865f2" }}>
-      <Grid container alignItems={"center"} height={"5rem"}>
+    <RBox bgColor="#5865f2">
+      <Grid container alignItems={"center"} height={"5rem"} width={"100%"}>
         <Grid item xs={2}>
           <SimpleLink href="" className="white-txt">
             <Stack direction="row" spacing={1}>
@@ -59,9 +60,11 @@ export default function NavBar() {
           </Stack>
         </Grid>
         <Grid item xs={2} display={"flex"} justifyContent={"flex-end"}>
-          <LinkButton className="white-txt black-bg">Login</LinkButton>
+          <LinkButton href="" className="white-bg black-txt">
+            Login
+          </LinkButton>
         </Grid>
       </Grid>
-    </header>
+    </RBox>
   );
 }
