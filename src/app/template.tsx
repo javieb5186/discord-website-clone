@@ -3,8 +3,8 @@ import { ScreenContext } from "store/ScreenContext";
 import getMedia from "utils/getMedia";
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  const { desktop } = getMedia();
+  const media = getMedia();
   return (
-    <ScreenContext.Provider value={desktop}>{children}</ScreenContext.Provider>
+    <ScreenContext.Provider value={media}>{children}</ScreenContext.Provider>
   );
 }
