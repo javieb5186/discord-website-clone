@@ -3,12 +3,11 @@
 
 "use client";
 
-import { Link } from "@mui/material";
+import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const LinkButton = styled(Link)({
-  textDecoration: "none",
+export const SimpleButton = styled(Button)({
+  textTransform: "none",
   borderRadius: "1rem",
-  padding: "8px 16px",
   height: "2rem",
 });
