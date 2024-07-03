@@ -1,6 +1,12 @@
 import { Box } from "@mui/material";
 import Icon from "./Icon";
-export default function DownloadIcon({ width, height, title, color }: Icon) {
+export default function DownloadIcon({
+  width,
+  height,
+  title,
+  color,
+  className,
+}: Icon) {
   return (
     <Box width={width} display={"flex"} justifyContent={"center"}>
       <svg
@@ -8,6 +14,7 @@ export default function DownloadIcon({ width, height, title, color }: Icon) {
         aria-label="download"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512"
+        className={className}
         style={{ height: height }}
       >
         {title && <title>{title}</title>}

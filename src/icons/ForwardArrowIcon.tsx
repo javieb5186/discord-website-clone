@@ -5,6 +5,7 @@ export default function ForwardArrowIcon({
   height,
   title,
   color,
+  className,
 }: Icon) {
   return (
     <Box width={width} display={"flex"} justifyContent={"center"}>
@@ -13,6 +14,7 @@ export default function ForwardArrowIcon({
         aria-label="more"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
+        className={className}
         style={{ height: height }}
       >
         {title && <title>{title}</title>}
