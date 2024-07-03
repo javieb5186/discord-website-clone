@@ -30,12 +30,21 @@ a {
   width: 90vw;
 }
 
-.black-txt {
+.important-black-txt {
   color: black !important;
 }
 
-.white-txt {
+.important-white-txt {
   color: white !important;
+}
+
+.black-txt {
+  color: black;
+  transition: color 0.25s;
+}
+
+.white-txt {
+  color: white;
 }
 
 .white-bg {
@@ -47,5 +56,22 @@ a {
 }
 
 .brand-bg {
+  background-color: var(--brand);
+}
+
+.black-fill {
+  fill: "black";
+  transition: fill 0.25s;
+}
+
+.white-fill {
+  fill: "white";
+}
+
+.brand-fill {
+  fill: var(--brand);
+}
+
+.brand-txt {
   background-color: var(--brand);
 }

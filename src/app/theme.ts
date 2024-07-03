@@ -7,7 +7,7 @@ const theme = createTheme({
     // Breakpoints for getMedia and MUI to use
     values: {
       xs: 0,
-      sm: 600,
+      sm: 477,
       md: 992,
       lg: 1200,
       xl: 1536,

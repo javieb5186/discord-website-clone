@@ -28,7 +28,7 @@ import { links, safetyLinks } from "./data/data";
 
 export default function NavBar() {
   // Used to get what type of media is being used
-  const { desktop, tablet, mobile } = useContext(ScreenContext);
+  const { desktop, mobile } = useContext(ScreenContext);
 
   // To control the Drawer
   const [open, setOpen] = useState(false);
@@ -148,7 +148,7 @@ export default function NavBar() {
   );
 
   return (
-    <RBox bgColor="#5865f2">
+    <RBox boxProps={{ position: "absolute", top: "0", zIndex: 1 }}>
       <Grid container alignItems={"center"} height={"5rem"} width={"100%"}>
         <Grid item xs={6} md={2}>
           {!open && <LogoAndTitle color="white" />}
@@ -170,17 +170,24 @@ export default function NavBar() {
         <Grid item xs={6} md={2} display={"flex"} justifyContent={"flex-end"}>
           {/* Change from mobile UI to desktop UI based on media */}
           {desktop ? (
-            <LinkButton href="" className="white-bg black-txt">
+            <LinkButton href="" className="white-bg important-black-txt">
               Login
             </LinkButton>
           ) : (
             <Stack direction={"row"} spacing={1} alignItems={"center"}>
               {!mobile && (
-                <LinkButton href="" className="white-bg black-txt">
+                <LinkButton href="" className="white-bg important-black-txt">
                   Login
                 </LinkButton>
               )}
-              <Button onClick={toggleDrawer(true)}>
+              <Button
+                onClick={toggleDrawer(true)}
+                sx={{
+                  paddingRight: 0,
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
                 <MenuIcon color="white" width="2rem" height="2rem" />
               </Button>
             </Stack>
