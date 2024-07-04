@@ -26,16 +26,26 @@ export default function Hero() {
         sx={{
           backgroundColor: "#161CBB",
           borderRadius: "2rem",
-          height: "3rem",
-          minWidth: "20rem",
+          height: "auto",
+          maxWidth: "25rem",
           "&:hover": {
             backgroundColor: "#161CBB",
           },
         }}
       >
-        <Typography className="white-txt" fontSize={"1.5rem"}>
-          Open Discord in your Browser
-        </Typography>
+        <Box
+          minHeight={"3rem"}
+          width={"100%"}
+          display={"flex"}
+          alignItems={"center"}
+        >
+          <Typography
+            className="white-txt"
+            fontSize={{ xs: "1rem", sm: "1.5rem" }}
+          >
+            Open Discord in your Browser
+          </Typography>
+        </Box>
       </SimpleButton>
     );
   }
@@ -56,7 +66,7 @@ export default function Hero() {
   useEffect(() => {
     // Set states in useEffect to avoid Hydration Error
     setDownloadText(textByDevice());
-    isWindows || isMacOs
+    isMacOs || isWindows
       ? setBrowserButton({ component: <ComponentByDesktop />, exists: true })
       : setBrowserButton({
           component: <SimpleButton />,
@@ -120,8 +130,8 @@ export default function Hero() {
               sx={{
                 backgroundColor: "white",
                 borderRadius: "2rem",
-                height: "3rem",
-                minWidth: "20rem",
+                height: "auto",
+                maxWidth: "25rem",
                 "&:hover": {
                   backgroundColor: "white",
                 },
@@ -130,9 +140,17 @@ export default function Hero() {
                 },
               }}
             >
-              <Stack direction={"row"} spacing={2}>
+              <Stack
+                direction={"row"}
+                spacing={2}
+                minHeight={"3rem"}
+                alignItems={"center"}
+              >
                 <DownloadIcon width="1.5rem" className="black-fill" />
-                <Typography className="download black-txt" fontSize={"1.5rem"}>
+                <Typography
+                  className="download black-txt"
+                  fontSize={{ xs: "1.25rem", sm: "1.5rem" }}
+                >
                   {downloadText}
                 </Typography>
               </Stack>
