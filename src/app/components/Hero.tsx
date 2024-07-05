@@ -75,7 +75,11 @@ export default function Hero() {
   }, []);
   return (
     <RBox bgGradient="radial-gradient(at 100% 100%, #3255eb, #000027)">
-      <Stack minHeight={{ xs: "45rem", sm: "50rem" }} spacing={5} py={10}>
+      <Stack
+        minHeight={{ xs: "45rem", sm: "50rem" }}
+        spacing={5}
+        p={"5rem 0rem 10rem"}
+      >
         <Grid container>
           <Grid item xs={12} lg={5} order={{ xs: 2, lg: 1 }}>
             <Stack
