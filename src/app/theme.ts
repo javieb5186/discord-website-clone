@@ -8,8 +8,8 @@ const theme = createTheme({
     values: {
       xs: 0,
       sm: 477,
-      md: 992,
-      lg: 1200,
+      md: 767,
+      lg: 992,
       xl: 1536,
     },
   },

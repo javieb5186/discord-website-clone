@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { Grid, Typography, Stack, Box } from "@mui/material";
 import { isAndroid, isIOS, isWindows, isMacOs } from "react-device-detect";
-import { SimpleButton } from "components";
-import { RBox } from "components";
+import { SimpleButton } from "globalComponents";
+import { RBox } from "globalComponents";
 import DownloadIcon from "icons/DownloadIcon";
 import Image from "next/image";
 import hero from "assets/hero-computer.webp";
@@ -77,7 +77,7 @@ export default function Hero() {
     <RBox bgGradient="radial-gradient(at 100% 100%, #3255eb, #000027)">
       <Stack minHeight={{ xs: "45rem", sm: "50rem" }} spacing={5} py={10}>
         <Grid container>
-          <Grid item xs={12} md={5} order={{ xs: 2, md: 1 }}>
+          <Grid item xs={12} lg={5} order={{ xs: 2, lg: 1 }}>
             <Stack
               height={"100%"}
               spacing={2}
@@ -86,14 +86,14 @@ export default function Hero() {
             >
               <Typography
                 component={"h1"}
-                textAlign={{ xs: "center", md: "left" }}
-                fontSize={{ xs: "1.5rem", sm: "2.25rem", md: "3rem" }}
+                textAlign={{ xs: "center", lg: "left" }}
+                fontSize={{ xs: "1.5rem", sm: "2.25rem", lg: "3rem" }}
               >
                 GROUP CHAT THAT'S ALL FUN & GAMES
               </Typography>
               <Typography
-                fontSize={{ xs: "1rem", sm: "1.25rem", md: "1.5rem" }}
-                textAlign={{ xs: "center", md: "left" }}
+                fontSize={{ xs: "1rem", sm: "1.25rem", lg: "1.5rem" }}
+                textAlign={{ xs: "center", lg: "left" }}
               >
                 Discord is great for playing games and chilling with friends, or
                 even building a worldwide community. Customize your own space to
@@ -104,19 +104,22 @@ export default function Hero() {
           <Grid
             item
             xs={12}
-            md={7}
-            order={{ xs: 1, md: 2 }}
+            lg={7}
+            order={{ xs: 1, lg: 2 }}
             display={"flex"}
             justifyContent={"center"}
           >
             <Box
               position={"relative"}
               width={"800px"}
-              height={{ xs: "300px", sm: "450px", md: "600px" }}
+              height={{ xs: "300px", sm: "450px", lg: "600px" }}
             >
               <Image
                 src={hero}
                 alt="Unity through Discord"
+                priority
+                as="image"
+                sizes="100%"
                 fill
                 style={{ objectFit: "contain" }}
               />
