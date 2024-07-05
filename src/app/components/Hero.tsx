@@ -118,7 +118,6 @@ export default function Hero() {
                 src={hero}
                 alt="Unity through Discord"
                 priority
-                as="image"
                 sizes="100%"
                 fill
                 style={{ objectFit: "contain" }}
