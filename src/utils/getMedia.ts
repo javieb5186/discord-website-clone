@@ -7,7 +7,7 @@ import theme from "app/theme";
 export default function getMedia() {
   const mobile = useMediaQuery(theme.breakpoints.up("xs"));
   const tablet = useMediaQuery(theme.breakpoints.up("sm"));
-  const desktop = useMediaQuery(theme.breakpoints.up("md"));
+  const desktop = useMediaQuery(theme.breakpoints.up("lg"));
 
   const isMobile = mobile && !tablet && !desktop;
   const isTablet = mobile && tablet && !desktop;

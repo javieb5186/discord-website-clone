@@ -12,19 +12,19 @@ import {
   Drawer,
   Typography,
 } from "@mui/material";
-import { LinkButton } from "components";
-import { SimpleLink } from "components";
-import { SimpleButton } from "components";
-import { RBox } from "components";
+import { LinkButton } from "globalComponents";
+import { SimpleLink } from "globalComponents";
+import { SimpleButton } from "globalComponents";
+import { RBox } from "globalComponents";
 import { useContext } from "react";
 import { ScreenContext } from "store/ScreenContext";
 import MenuIcon from "icons/MenuIcon";
 import CloseIcon from "icons/CloseIcon";
-import LogoAndTitle from "components/LogoAndTitle";
+import LogoAndTitle from "globalComponents/LogoAndTitle";
 import DownloadIcon from "icons/DownloadIcon";
 import BackArrowIcon from "icons/BackArrowIcon";
 import ForwardArrowIcon from "icons/ForwardArrowIcon";
-import { links, safetyLinks } from "./data/data";
+import { links, safetyLinks } from "../data/data";
 
 export default function NavBar() {
   // Used to get what type of media is being used
@@ -150,12 +150,12 @@ export default function NavBar() {
   return (
     <RBox boxProps={{ position: "absolute", top: "0", zIndex: 1 }}>
       <Grid container alignItems={"center"} height={"5rem"} width={"100%"}>
-        <Grid item xs={6} md={2}>
+        <Grid item xs={6} lg={2}>
           {!open && <LogoAndTitle color="white" />}
         </Grid>
         {/* If media is desktop, then add another Grid item to Grid Container */}
         {desktop && (
-          <Grid item md={8}>
+          <Grid item lg={8}>
             <Stack direction={"row"} spacing={5} justifyContent={"center"}>
               {links.map(({ text, href }) => {
                 return (
@@ -167,7 +167,7 @@ export default function NavBar() {
             </Stack>
           </Grid>
         )}
-        <Grid item xs={6} md={2} display={"flex"} justifyContent={"flex-end"}>
+        <Grid item xs={6} lg={2} display={"flex"} justifyContent={"flex-end"}>
           {/* Change from mobile UI to desktop UI based on media */}
           {desktop ? (
             <LinkButton href="" className="white-bg important-black-txt">
