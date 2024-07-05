@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import GroupChatContent from "./components/GroupChatContent";
 import StreamContent from "./components/StreamContent";
 import PartyChatContent from "./components/PartyChatContent";
+import Banner from "./components/Banner";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <GroupChatContent />
       <StreamContent />
       <PartyChatContent />
+      <Banner />
     </>
   );
 }

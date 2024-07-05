@@ -12,7 +12,7 @@ export default function SectionBackground({
   return (
     <Box
       width={"100%"}
-      p={{ xs: "0rem 0rem 3rem 0rem", sm: "10rem 0rem" }}
+      p={"0rem 0rem 10rem 0rem"}
       sx={{
         backgroundImage: bgGradient,
       }}
