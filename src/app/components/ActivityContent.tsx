@@ -9,7 +9,7 @@ export default function ActivityContent() {
       bgGradient={"radial-gradient(at 100% 100%, #3255eb, #000027)"}
     >
       <SectionCard
-        inverse={false}
+        inverse={true}
         image={{
           src: activityImg,
           alt: "See what friends are active and what they are doing",

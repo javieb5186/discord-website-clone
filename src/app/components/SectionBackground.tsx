@@ -15,7 +15,7 @@ export default function SectionBackground({
     <Box
       width={"100%"}
       p={{
-        xs: "0rem 0rem 5rem 0rem",
+        xs: "0rem 0rem 8rem 0rem",
         md: paddingToTop ? "10rem 0rem" : "0rem 0rem 10rem 0rem",
       }}
       sx={{

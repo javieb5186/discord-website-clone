@@ -35,6 +35,8 @@ export default function SectionCard({
           borderRadius={"3rem"}
           sx={{
             background: "rgba(255, 255, 255, 0.2)",
+            WebkitBackdropFilter: "blur(40px)",
+            backdropFilter: "blur(40px)",
           }}
         >
           <Grid
