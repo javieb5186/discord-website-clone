@@ -4,6 +4,7 @@ import GroupChatContent from "./components/GroupChatContent";
 import StreamContent from "./components/StreamContent";
 import PartyChatContent from "./components/PartyChatContent";
 import Banner from "./components/Banner";
+import ActivityContent from "./components/ActivityContent";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <StreamContent />
       <PartyChatContent />
       <Banner />
+      <ActivityContent />
     </>
   );
 }
