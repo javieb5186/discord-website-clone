@@ -6,6 +6,7 @@ import PartyChatContent from "./components/PartyChatContent";
 import Banner from "./components/Banner";
 import ActivityContent from "./components/ActivityContent";
 import AllPurposeContent from "./components/AllPurposeContent";
+import PlatformsContent from "./components/PlatformsContent";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Banner />
       <ActivityContent />
       <AllPurposeContent />
+      <PlatformsContent />
     </>
   );
 }
