@@ -59,13 +59,17 @@ a {
   background-color: var(--brand);
 }
 
+.important-brand-bg {
+  background-color: var(--brand) !important;
+}
+
 .black-fill {
-  fill: "black";
+  fill: black;
   transition: fill 0.25s;
 }
 
 .white-fill {
-  fill: "white";
+  fill: white;
 }
 
 .brand-fill {

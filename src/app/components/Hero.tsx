@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
+import useTextByDevice from "hooks/useTextByDevice";
 import { Grid, Typography, Stack, Box } from "@mui/material";
-import { isAndroid, isIOS, isWindows, isMacOs } from "react-device-detect";
+import { isWindows, isMacOs } from "react-device-detect";
 import { SimpleButton } from "globalComponents";
 import { RBox } from "globalComponents";
 import DownloadIcon from "icons/DownloadIcon";
@@ -9,15 +10,6 @@ import Image from "next/image";
 import hero from "assets/hero-computer.webp";
 
 export default function Hero() {
-  function textByDevice() {
-    let text = "Download";
-    isAndroid && (text = "Download from Google Play");
-    isIOS && (text = "Download from App Store");
-    isWindows && (text = "Download for Windows");
-    isMacOs && (text = "Download for Mac");
-    return text;
-  }
-
   // A function that will appear if desktop (Mac or Windows) is being used
   function ComponentByDesktop() {
     return (
@@ -60,12 +52,11 @@ export default function Hero() {
     exists: false,
   };
 
-  const [downloadText, setDownloadText] = useState("Download");
+  const [downloadText] = useTextByDevice();
   const [BrowserButton, setBrowserButton] = useState(initialValues);
 
   useEffect(() => {
     // Set states in useEffect to avoid Hydration Error
-    setDownloadText(textByDevice());
     isMacOs || isWindows
       ? setBrowserButton({ component: <ComponentByDesktop />, exists: true })
       : setBrowserButton({
@@ -152,10 +143,10 @@ export default function Hero() {
                 minHeight={"3rem"}
                 alignItems={"center"}
               >
-                <DownloadIcon width="1.5rem" className="black-fill" />
+                <DownloadIcon width="1.25rem" className="black-fill" />
                 <Typography
                   className="download black-txt"
-                  fontSize={{ xs: "1.25rem", sm: "1.5rem" }}
+                  fontSize={{ xs: "1rem", md: "1.25rem" }}
                 >
                   {downloadText}
                 </Typography>
