@@ -135,6 +135,7 @@ export default function NavBar() {
           <SimpleButton
             variant="contained"
             fullWidth
+            className="important-brand-bg"
             sx={{ alignSelf: "flex-end" }}
           >
             <Stack direction={"row"} spacing={2}>

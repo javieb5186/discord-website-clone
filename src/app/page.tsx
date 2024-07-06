@@ -7,6 +7,7 @@ import Banner from "./components/Banner";
 import ActivityContent from "./components/ActivityContent";
 import AllPurposeContent from "./components/AllPurposeContent";
 import PlatformsContent from "./components/PlatformsContent";
+import EndOfContent from "./components/EndOfContent";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <ActivityContent />
       <AllPurposeContent />
       <PlatformsContent />
+      <EndOfContent />
     </>
   );
 }
