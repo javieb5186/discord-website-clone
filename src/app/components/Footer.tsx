@@ -1,3 +1,5 @@
+// A section to be rendered in root route
+
 "use client";
 import { SyntheticEvent, useState, useContext } from "react";
 import {
@@ -44,8 +46,8 @@ export default function Footer() {
   };
 
   // Will set the text to whichever button it has been selected from
-  const handleLanguage = (event: SyntheticEvent) => {
-    const index = event.currentTarget.getAttribute("data-index");
+  const handleLanguage = (e: SyntheticEvent) => {
+    const index = e.currentTarget.getAttribute("data-index");
     setCurrentLanguage(languages[Number(index)]);
     handleDisplay();
   };

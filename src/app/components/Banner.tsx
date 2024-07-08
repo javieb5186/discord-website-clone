@@ -1,3 +1,5 @@
+// A banner section to be rendered in root route
+
 import { Box, Typography, Stack } from "@mui/material";
 import DiscordIcon from "icons/DiscordIcon";
 
@@ -18,7 +20,7 @@ export default function Banner() {
         spacing={"10rem"}
         divider={<DiscordIcon width={"3rem"} color="white" />}
       >
-        {bannerText.map(() => {
+        {Array.from({ length: 4 }).map(() => {
           return bannerText.map((text) => {
             return (
               <Typography fontSize={"3rem"} className="white-txt" noWrap>

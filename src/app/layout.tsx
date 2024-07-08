@@ -5,9 +5,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import "./globals.css";
 import theme from "./theme";
 
-// Font from google
+// Font from Google
 const inter = Inter({ subsets: ["latin"] });
 
+// Metadata that is used by NextJS
 export const metadata: Metadata = {
   title: "Discord - Group Chat That's All Fun & Games",
   description: "A replicated clone of Discord for educational purposes",

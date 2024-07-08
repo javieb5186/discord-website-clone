@@ -1,4 +1,4 @@
-// A Logo and title in one link component
+// A Logo and Title in one link component
 
 import { SimpleLink } from "./SimpleLink";
 import { Stack, Typography } from "@mui/material";

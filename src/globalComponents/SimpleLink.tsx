@@ -1,8 +1,6 @@
-// A link with a simple style using MUI
-// Accepts a color
+// A Custom MUI Link that accepts some props with a simple style.
 
 "use client";
-
 import { Link } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { PropsWithChildren } from "react";

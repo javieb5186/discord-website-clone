@@ -1,3 +1,6 @@
+// A function that loads text by which device is being used.
+// Detects it by user agent string
+
 "use client";
 import { useState, useEffect } from "react";
 import { isAndroid, isIOS, isWindows, isMacOs } from "react-device-detect";

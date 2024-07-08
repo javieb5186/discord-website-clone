@@ -18,33 +18,22 @@ import { SimpleButton } from "globalComponents";
 import { RBox } from "globalComponents";
 import { useContext } from "react";
 import { ScreenContext } from "store/ScreenContext";
+import { links, safetyLinks } from "app/data";
 import MenuIcon from "icons/MenuIcon";
 import CloseIcon from "icons/CloseIcon";
 import LogoAndTitle from "globalComponents/LogoAndTitle";
 import DownloadIcon from "icons/DownloadIcon";
 import BackArrowIcon from "icons/BackArrowIcon";
 import ForwardArrowIcon from "icons/ForwardArrowIcon";
-import { links, safetyLinks } from "app/data";
 
-export default function NavBar() {
-  // Used to get what type of media is being used
-  const { desktop, mobile } = useContext(ScreenContext);
+interface Props {
+  safety: boolean;
+  handleSafety: (toggle: boolean) => void;
+  handleDrawer: (toggle: boolean) => void;
+}
 
-  // To control the Drawer
-  const [open, setOpen] = useState(false);
-
-  // To control the displaying of Safety UI
-  const [safety, setSafety] = useState(false);
-
-  // Handlers
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen);
-  };
-  const toggleSafety = (toggle: boolean) => () => {
-    setSafety(toggle);
-  };
-
-  const MainDrawer = (
+function MainDrawer({ safety, handleSafety, handleDrawer }: Props) {
+  return (
     <Box
       sx={{ width: 350, padding: "1rem", height: "80%" }}
       role="presentation"
@@ -58,7 +47,7 @@ export default function NavBar() {
         >
           {/* Change Top of Drawer when safety is toggled */}
           {safety ? (
-            <SimpleButton onClick={toggleSafety(false)}>
+            <SimpleButton onClick={() => handleSafety(false)}>
               <Stack direction={"row"} spacing={1}>
                 <BackArrowIcon width="1rem" color="black" />
                 <Typography className="black-txt">Back</Typography>
@@ -68,7 +57,7 @@ export default function NavBar() {
             <LogoAndTitle color="black" />
           )}
           <Button
-            onClick={toggleDrawer(false)}
+            onClick={() => handleDrawer(false)}
             sx={{ display: "flex", justifyContent: "flex-end", padding: 0 }}
           >
             <CloseIcon color="black" width="1.25rem" />
@@ -114,7 +103,7 @@ export default function NavBar() {
                 <SimpleButton
                   key={text}
                   sx={{ color: "black", padding: 0 }}
-                  onClick={toggleSafety(true)}
+                  onClick={() => handleSafety(true)}
                   fullWidth
                 >
                   <Stack
@@ -129,7 +118,6 @@ export default function NavBar() {
               );
             })
           )}
-          {}
         </Stack>
         <Box height={"100%"} display={"flex"} alignItems={"flex-end"}>
           <SimpleButton
@@ -147,6 +135,25 @@ export default function NavBar() {
       </Stack>
     </Box>
   );
+}
+
+export default function NavBar() {
+  // Used to get what type of media is being used
+  const { desktop, mobile } = useContext(ScreenContext);
+
+  // To control the Drawer
+  const [open, setOpen] = useState(false);
+
+  // To control the displaying of Safety UI
+  const [safety, setSafety] = useState(false);
+
+  // Handlers
+  const handleDrawer = (newOpen: boolean) => {
+    setOpen(newOpen);
+  };
+  const handleSafety = (toggle: boolean) => {
+    setSafety(toggle);
+  };
 
   return (
     <RBox boxProps={{ position: "absolute", top: "0", zIndex: 1 }}>
@@ -176,13 +183,11 @@ export default function NavBar() {
             </LinkButton>
           ) : (
             <Stack direction={"row"} spacing={1} alignItems={"center"}>
-              {!mobile && (
-                <LinkButton href="" className="white-bg important-black-txt">
-                  Login
-                </LinkButton>
-              )}
+              <LinkButton href="" className="white-bg important-black-txt">
+                Login
+              </LinkButton>
               <Button
-                onClick={toggleDrawer(true)}
+                onClick={() => handleDrawer(true)}
                 sx={{
                   paddingRight: 0,
                   display: "flex",
@@ -195,9 +200,13 @@ export default function NavBar() {
           )}
         </Grid>
       </Grid>
-      <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
+      <Drawer open={open} onClose={() => handleDrawer(false)} anchor="right">
         {/* The content of drawer to be rendered */}
-        {MainDrawer}
+        <MainDrawer
+          safety={safety}
+          handleDrawer={handleDrawer}
+          handleSafety={handleSafety}
+        />
       </Drawer>
     </RBox>
   );

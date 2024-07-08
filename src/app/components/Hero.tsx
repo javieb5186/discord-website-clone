@@ -1,61 +1,59 @@
+// A hero section to be rendered for the root route
+
 "use client";
 import { useState, useEffect } from "react";
-import useTextByDevice from "hooks/useTextByDevice";
 import { Grid, Typography, Stack, Box } from "@mui/material";
 import { isWindows, isMacOs } from "react-device-detect";
 import { SimpleButton } from "globalComponents";
 import { RBox } from "globalComponents";
+import useTextByDevice from "hooks/useTextByDevice";
 import DownloadIcon from "icons/DownloadIcon";
 import Image from "next/image";
 import hero from "assets/hero-computer.webp";
 
-export default function Hero() {
-  // A function that will appear if desktop (Mac or Windows) is being used
-  function ComponentByDesktop() {
-    return (
-      <SimpleButton
-        variant="contained"
-        sx={{
+// A function that will appear if desktop (Mac or Windows) is being used
+function ComponentByDesktop() {
+  return (
+    <SimpleButton
+      variant="contained"
+      sx={{
+        backgroundColor: "#161CBB",
+        borderRadius: "2rem",
+        height: "auto",
+        maxWidth: "25rem",
+        "&:hover": {
           backgroundColor: "#161CBB",
-          borderRadius: "2rem",
-          height: "auto",
-          maxWidth: "25rem",
-          "&:hover": {
-            backgroundColor: "#161CBB",
-          },
-        }}
+        },
+      }}
+    >
+      <Box
+        minHeight={"3rem"}
+        width={"100%"}
+        display={"flex"}
+        alignItems={"center"}
       >
-        <Box
-          minHeight={"3rem"}
-          width={"100%"}
-          display={"flex"}
-          alignItems={"center"}
+        <Typography
+          className="white-txt"
+          fontSize={{ xs: "1rem", sm: "1.5rem" }}
         >
-          <Typography
-            className="white-txt"
-            fontSize={{ xs: "1rem", sm: "1.5rem" }}
-          >
-            Open Discord in your Browser
-          </Typography>
-        </Box>
-      </SimpleButton>
-    );
-  }
+          Open Discord in your Browser
+        </Typography>
+      </Box>
+    </SimpleButton>
+  );
+}
 
-  interface Initial {
-    component?: JSX.Element;
-    exists?: boolean;
-  }
-
-  const initialValues: Initial = {
+export default function Hero() {
+  const initialValues = {
     component: <SimpleButton />,
     exists: false,
   };
 
   const [downloadText] = useTextByDevice();
-  const [BrowserButton, setBrowserButton] = useState(initialValues);
+  const [browserButton, setBrowserButton] = useState(initialValues);
 
   useEffect(() => {
+    // If being used by desktop then render the component if exists
     // Set states in useEffect to avoid Hydration Error
     isMacOs || isWindows
       ? setBrowserButton({ component: <ComponentByDesktop />, exists: true })
@@ -152,7 +150,7 @@ export default function Hero() {
                 </Typography>
               </Stack>
             </SimpleButton>
-            {BrowserButton.exists && BrowserButton.component}
+            {browserButton.exists && browserButton.component}
           </Stack>
         </Box>
       </Stack>

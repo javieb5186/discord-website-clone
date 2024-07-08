@@ -1,8 +1,10 @@
+// A section to be rendered in root route
+
 "use client";
-import useTextByDevice from "hooks/useTextByDevice";
 import { Box, Stack, Typography } from "@mui/material";
 import { RBox } from "globalComponents";
 import { SimpleButton } from "globalComponents";
+import useTextByDevice from "hooks/useTextByDevice";
 import DownloadIcon from "icons/DownloadIcon";
 import contentFooterImg from "assets/content-footer.webp";
 import Image from "next/image";
