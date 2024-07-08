@@ -24,7 +24,7 @@ import LogoAndTitle from "globalComponents/LogoAndTitle";
 import DownloadIcon from "icons/DownloadIcon";
 import BackArrowIcon from "icons/BackArrowIcon";
 import ForwardArrowIcon from "icons/ForwardArrowIcon";
-import { links, safetyLinks } from "../data/data";
+import { links, safetyLinks } from "app/data";
 
 export default function NavBar() {
   // Used to get what type of media is being used
