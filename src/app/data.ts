@@ -1,3 +1,14 @@
+import englishImg from "assets/english-flag.png";
+import spanishImg from "assets/spanish-flag.png";
+import franceImg from "assets/france-flag.png";
+import italyImg from "assets/italy-flag.png";
+import netherlandsImg from "assets/netherlands-flag.png";
+import portaguesImg from "assets/portagues-flag.png";
+import romanianImg from "assets/romanian-flag.png";
+import turkishImg from "assets/turkish-flag.png";
+import chineseImg from "assets/chinese-flag.png";
+import japaneseImg from "assets/japan-flag.png";
+
 // Links for NavBar component
 export const links = [
   {
@@ -123,6 +134,110 @@ export const safetyLinks = [
         text: "How you can appeal to our actions",
         href: "",
       },
+    ],
+  },
+];
+
+//
+export const languages = [
+  {
+    text: "English",
+    locale: "enUS",
+    imgSrc: englishImg,
+  },
+  {
+    text: "Spanish",
+    locale: "esES",
+    imgSrc: spanishImg,
+  },
+  {
+    text: "France",
+    locale: "frFR",
+    imgSrc: franceImg,
+  },
+  {
+    text: "Italy",
+    locale: "itIT",
+    imgSrc: italyImg,
+  },
+  {
+    text: "Netherlands",
+    locale: "nlNL",
+    imgSrc: netherlandsImg,
+  },
+  {
+    text: "Portagues",
+    locale: "ptPT",
+    imgSrc: portaguesImg,
+  },
+  {
+    text: "Romania",
+    locale: "roRO",
+    imgSrc: romanianImg,
+  },
+  {
+    text: "Turkish",
+    locale: "trTR",
+    imgSrc: turkishImg,
+  },
+  {
+    text: "Chinese",
+    locale: "zhCN",
+    imgSrc: chineseImg,
+  },
+  {
+    text: "Japanese",
+    locale: "jaJP",
+    imgSrc: japaneseImg,
+  },
+];
+
+export const navigationLinks = [
+  {
+    category: "Product",
+    links: [
+      "Download",
+      "Nitro",
+      "Status",
+      "App Directory",
+      "New Mobile Experience",
+    ],
+  },
+  {
+    category: "Company",
+    links: ["About", "Jobs", "Brand", "Newsroom"],
+  },
+  {
+    category: "Empty",
+    links: [""],
+  },
+  {
+    category: "Resources",
+    links: [
+      "College",
+      "Support",
+      "Safety",
+      "Blog",
+      "Feedback",
+      "Streamkit",
+      "Creators",
+      "Community",
+      "Developers",
+      "Gaming",
+      "Quests",
+      "Offical 3rd Party Merch",
+    ],
+  },
+  {
+    category: "Policies",
+    links: [
+      "Terms",
+      "Privacy",
+      "Cookie Settings",
+      "Guidelines",
+      "Acknowledgements",
+      "Licenses",
+      "Company Information",
     ],
   },
 ];
