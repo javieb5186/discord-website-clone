@@ -1,8 +1,6 @@
-// A link that looks like a button using MUI
-// Accepts a color and background color
+// A simple Custom MUI button
 
 "use client";
-
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 

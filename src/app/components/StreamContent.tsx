@@ -1,3 +1,5 @@
+// A section to be rendered in root route
+
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
 import streamImg from "assets/stream.png";

@@ -138,7 +138,7 @@ export const safetyLinks = [
   },
 ];
 
-//
+// Languages for footer component
 export const languages = [
   {
     text: "English",
@@ -192,6 +192,7 @@ export const languages = [
   },
 ];
 
+// Navigation links for footer component
 export const navigationLinks = [
   {
     category: "Product",

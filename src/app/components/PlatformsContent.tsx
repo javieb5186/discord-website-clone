@@ -1,3 +1,5 @@
+// A section to be rendered in root route
+
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
 import platformsImg from "assets/platforms.png";

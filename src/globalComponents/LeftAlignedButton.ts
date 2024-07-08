@@ -1,3 +1,5 @@
+// A Custom MUI Button that has left aligned content
+
 "use client";
 import { SimpleButton } from "./SimpleButton";
 import { styled } from "@mui/material/styles";

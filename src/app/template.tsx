@@ -3,6 +3,7 @@ import { ScreenContext } from "store/ScreenContext";
 import getMedia from "utils/getMedia";
 
 export default function Template({ children }: { children: React.ReactNode }) {
+  // Access to theme breakpoints outside of MUI props
   const media = getMedia();
 
   return (
