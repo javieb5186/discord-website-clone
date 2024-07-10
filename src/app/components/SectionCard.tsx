@@ -1,15 +1,11 @@
 import { PropsWithChildren } from "react";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { RBox } from "globalComponents";
-import Image, { StaticImageData } from "next/image";
 
 interface Props {
   OverlappingComponent?: JSX.Element;
   inverse: boolean;
-  image: {
-    src: StaticImageData;
-    alt: string;
-  };
+  videoSrc: string;
   title: string;
   body: string;
 }
@@ -17,7 +13,7 @@ interface Props {
 export default function SectionCard({
   OverlappingComponent,
   inverse,
-  image,
+  videoSrc,
   title,
   body,
   children,
@@ -41,74 +37,56 @@ export default function SectionCard({
             backdropFilter: "blur(40px)",
           }}
         >
-          <Grid
-            container
-            height={{
-              xs: "40rem",
-              sm: "40rem",
-              md: "30rem",
-              lg: "40rem",
-            }}
-            p={"1rem"}
-          >
-            <Grid
-              item
-              xs={12}
-              md={7}
-              height={{ xs: "auto", md: "100%" }}
-              order={inverse ? 2 : { xs: 2, md: 1 }}
-              display={"flex"}
-              justifyContent={{ xs: "flex-end", md: "center" }}
-            >
-              <Box
-                display={"flex"}
-                position={"relative"}
-                width={"100%"}
-                height={"100%"}
-                justifyContent={"center"}
-                alignContent={"center"}
-                borderRadius={"3rem"}
-                overflow={"hidden"}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  sizes="100%"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
+          <Grid container p={"1rem"} rowGap={"3rem"}>
+            <Grid item sm={12} md={7} order={inverse ? 2 : { xs: 2, md: 1 }}>
+              <Box alignContent={"center"} width={"100%"} height={"100%"}>
+                <Box
+                  borderRadius={"3rem"}
+                  overflow={"hidden"}
+                  sx={{ aspectRatio: "4 / 3" }}
+                >
+                  <video
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
+                    width={"100%"}
+                    height={"100%"}
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
+                  >
+                    <source src={videoSrc} />
+                  </video>
+                </Box>
               </Box>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              md={5}
-              height={{ xs: "33%", md: "100%" }}
-              order={inverse ? 1 : { xs: 1, md: 2 }}
-            >
+            <Grid item sm={12} md={5} order={inverse ? 1 : { xs: 1, md: 2 }}>
               <Stack
-                height={"100%"}
-                px={{ xs: 4, sm: 2, md: 4, lg: 6 }}
                 spacing={1}
-                justifyContent={"center"}
+                paddingTop={"2rem"}
+                px={"2rem"}
                 className="white-txt"
+                height={"100%"}
+                justifyContent={"center"}
               >
                 <Typography
                   component={"h2"}
                   fontSize={{
-                    xs: "1.2rem",
+                    xs: "1.4rem",
                     sm: "1.6rem",
-                    md: "2rem",
-                    lg: "2.5rem",
+                    md: "1.8rem",
+                    lg: "2rem",
                   }}
                 >
                   {title}
                 </Typography>
                 <Typography
                   fontSize={{
-                    xs: ".9rem",
-                    sm: "1rem",
-                    md: "1.1rem",
+                    xs: "1rem",
+                    sm: "1.1rem",
+                    md: "1.2rem",
                     lg: "1.3rem",
                   }}
                 >

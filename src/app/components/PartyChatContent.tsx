@@ -35,10 +35,7 @@ export default function PartyChatContent() {
       <SectionCard
         OverlappingComponent={<DiscordBox />}
         inverse={false}
-        image={{
-          src: partyChatImg,
-          alt: "Discord Chat efficient and easu channel switching",
-        }}
+        videoSrc="./party-chat-video.mp4"
         title={"HOP IN WHEN YOU'RE FREE, NO NEED TO CALL"}
         body={
           "Easily hop in and out of voice or text chats without having to call or invite anyone, so your party chat lasts before, during, and after your game session."

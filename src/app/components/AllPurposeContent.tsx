@@ -83,10 +83,7 @@ export default function AllPurposeContent() {
       <SectionCard
         OverlappingComponent={<PeopleBox />}
         inverse={false}
-        image={{
-          src: groupVideoChatImg,
-          alt: "Use Discord to communicate in many different ways",
-        }}
+        videoSrc="./all-purpose-video.mp4"
         title={"ALWAYS HAVE SOMETHING TO DO TOGETHER"}
         body={
           "Watch videos, play built-in games, listen to music, or just scroll together and spam memes. Seamlessly text, call, video chat, and play games, all in one group chat."

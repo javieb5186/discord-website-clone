@@ -7,7 +7,6 @@ import { ScreenContext } from "store/ScreenContext";
 import Image from "next/image";
 import SectionCard from "./SectionCard";
 import SectionBackground from "./SectionBackground";
-import chatImg from "assets/chat-with-wumpus.png";
 import partyWumpusGif from "assets/party-wumpus.gif";
 import egg from "assets/egg.webp";
 
@@ -62,10 +61,7 @@ export default function GroupChatContent() {
       <SectionCard
         OverlappingComponent={<PartyWumpus />}
         inverse={false}
-        image={{
-          src: chatImg,
-          alt: "Enjoyable chat through Discord",
-        }}
+        videoSrc={"./wumpus-chat.mp4"}
         title={"MAKE YOUR GROUP CHATS MORE FUN"}
         body={
           "Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way."

@@ -6,7 +6,7 @@ import { Grid, Typography, Stack, Box } from "@mui/material";
 import { isWindows, isMacOs } from "react-device-detect";
 import { SimpleButton } from "globalComponents";
 import { RBox } from "globalComponents";
-import AnimatedBg from "./AnimatedBg";
+import AnimatedStars from "./AnimatedStars";
 import AnimatedImages from "./AnimatedImages";
 import useTextByDevice from "hooks/useTextByDevice";
 import DownloadIcon from "icons/DownloadIcon";
@@ -156,7 +156,7 @@ export default function Hero() {
           </Stack>
         </Box>
       </Stack>
-      <AnimatedBg />
+      <AnimatedStars />
       <AnimatedImages />
     </RBox>
   );
