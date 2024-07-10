@@ -2,7 +2,7 @@
 // Drawer base component courtesy of MUI main docs
 
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Stack,
   Grid,
@@ -35,7 +35,8 @@ interface Props {
 function MainDrawer({ safety, handleSafety, handleDrawer }: Props) {
   return (
     <Box
-      sx={{ width: 350, padding: "1rem", height: "80%" }}
+      width={{ xs: 250, md: 350 }}
+      sx={{ padding: "1rem", height: "80%" }}
       role="presentation"
     >
       <Stack height={"100%"} spacing={3}>
@@ -139,13 +140,16 @@ function MainDrawer({ safety, handleSafety, handleDrawer }: Props) {
 
 export default function NavBar() {
   // Used to get what type of media is being used
-  const { desktop, mobile } = useContext(ScreenContext);
+  const { desktop } = useContext(ScreenContext);
 
   // To control the Drawer
   const [open, setOpen] = useState(false);
 
   // To control the displaying of Safety UI
   const [safety, setSafety] = useState(false);
+
+  const [background, setBackground] = useState(false);
+  const [firstChange, setFirstChange] = useState(false);
 
   // Handlers
   const handleDrawer = (newOpen: boolean) => {
@@ -155,8 +159,43 @@ export default function NavBar() {
     setSafety(toggle);
   };
 
+  useEffect(() => {
+    setFirstChange(false);
+  }, [desktop]);
+
+  useEffect(() => {
+    let delay = false;
+    setFirstChange(false);
+    !desktop &&
+      window.addEventListener("scroll", () => {
+        if (!delay) {
+          delay = true;
+          setTimeout(() => {
+            delay = false;
+            if (window.scrollY > 125) {
+              background ? null : setBackground(true), setFirstChange(true);
+            } else {
+              !background ? null : setBackground(false), setFirstChange(true);
+            }
+          }, 500);
+        }
+      });
+  }, [background]);
+
   return (
-    <RBox boxProps={{ position: "absolute", top: 0, zIndex: 2 }}>
+    <RBox
+      boxProps={{
+        position: { xs: "fixed", lg: "absolute" },
+        top: 0,
+        zIndex: 5,
+        className:
+          !desktop && firstChange
+            ? background
+              ? "show-navbar-bg"
+              : "hide-navbar-bg"
+            : "navbar-bg",
+      }}
+    >
       <Grid container alignItems={"center"} height={"5rem"} width={"100%"}>
         <Grid item xs={6} lg={2}>
           {!open && <LogoAndTitle color="white" />}
