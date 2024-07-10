@@ -9,10 +9,7 @@ export default function ActivityContent() {
     <SectionBackground paddingToTop>
       <SectionCard
         inverse={true}
-        image={{
-          src: activityImg,
-          alt: "See what friends are active and what they are doing",
-        }}
+        videoSrc="./activity-video.mp4"
         title={"SEE WHO'S AROUND TO CHILL"}
         body={
           "See who's around, playing games, or just hanging out. For supported games, you can see what modes or characters your friends are playing and directly join up."

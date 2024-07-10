@@ -9,10 +9,7 @@ export default function StreamContent() {
     <SectionBackground>
       <SectionCard
         inverse={true}
-        image={{
-          src: streamImg,
-          alt: "Stream with friends",
-        }}
+        videoSrc={"./stream-video.mp4"}
         title={"STREAM LIKE YOU'RE IN THE SAME ROOM"}
         body={
           "High quality and low latency streaming makes it feel like you're hanging out on the couch with friends while playing a game, watching shows, looking at photos, or idk doing homework or something."

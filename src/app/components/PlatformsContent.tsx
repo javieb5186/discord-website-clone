@@ -8,11 +8,8 @@ export default function PlatformsContent() {
   return (
     <SectionBackground>
       <SectionCard
-        inverse={false}
-        image={{
-          src: platformsImg,
-          alt: "Discord can be used on multiple platforms",
-        }}
+        inverse={true}
+        videoSrc="./platforms-video.mp4"
         title={"WHEREVER YOU GAME, HANG OUT HERE"}
         body={
           "On your PC, phone, or console, you can still hang out on Discord. Easily switch between devices and use tools to manage multiple group chats with friends."
