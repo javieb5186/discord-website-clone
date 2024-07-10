@@ -1,4 +1,4 @@
-@keyframes showBackground {
+@keyframes showNavBarBg {
   from {
     background-color: rgba(22, 28, 187, 0);
   }
@@ -8,11 +8,11 @@
   }
 }
 
-.show-background {
-  animation: showBackground 0.2s linear forwards;
+.show-navbar-bg {
+  animation: showNavBarBg 0.2s linear forwards;
 }
 
-@keyframes hideBackground {
+@keyframes hideNavBarBg {
   from {
     background-color: rgba(22, 28, 187, 1);
   }
@@ -22,8 +22,8 @@
   }
 }
 
-.hide-background {
-  animation: hideBackground 0.2s linear forwards;
+.hide-navbar-bg {
+  animation: hideNavBarBg 0.2s linear forwards;
 }
 
 .navbar-bg {

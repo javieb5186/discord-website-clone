@@ -161,7 +161,11 @@ export default function NavBar() {
 
   useEffect(() => {
     setFirstChange(false);
+  }, [desktop]);
+
+  useEffect(() => {
     let delay = false;
+    setFirstChange(false);
     !desktop &&
       window.addEventListener("scroll", () => {
         if (!delay) {
@@ -176,7 +180,7 @@ export default function NavBar() {
           }, 500);
         }
       });
-  });
+  }, [background]);
 
   return (
     <RBox
@@ -187,8 +191,8 @@ export default function NavBar() {
         className:
           !desktop && firstChange
             ? background
-              ? "show-background"
-              : "hide-background"
+              ? "show-navbar-bg"
+              : "hide-navbar-bg"
             : "navbar-bg",
       }}
     >
