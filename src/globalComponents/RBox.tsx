@@ -2,7 +2,7 @@
 // Can accept a background color along with MUI props
 
 "use client";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { PropsWithChildren } from "react";
 import { ScreenContext } from "store/ScreenContext";
 import { useContext } from "react";
@@ -10,26 +10,35 @@ import { BoxProps } from "@mui/material";
 
 interface Props {
   bgColor?: string;
-  bgGradient?: string;
+  bgImage?: {
+    backgroundImage: string;
+    backgroundSize: string;
+  };
   boxProps?: BoxProps;
 }
 
 export function RBox({
   bgColor,
-  bgGradient,
+  bgImage,
   boxProps,
   children,
 }: PropsWithChildren<Props>) {
-  const desktop = useContext(ScreenContext);
+  const { desktop } = useContext(ScreenContext);
   return (
     <Box
       width={"100%"}
-      sx={{ backgroundColor: bgColor, backgroundImage: bgGradient }}
+      position={"relative"}
+      left={0}
+      top={0}
+      zIndex={2}
+      display={"flex"}
+      justifyContent={"center"}
+      sx={{ ...bgImage, backgroundColor: bgColor }}
       {...boxProps}
     >
-      <Container className={desktop ? "desktop-screen" : "mobile-screen"}>
+      <Box className={desktop ? "desktop-screen" : "mobile-screen"}>
         {children}
-      </Container>
+      </Box>
     </Box>
   );
 }

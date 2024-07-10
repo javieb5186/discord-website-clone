@@ -27,7 +27,7 @@ a {
 }
 
 .mobile-screen {
-  width: 90vw;
+  width: 95vw;
 }
 
 .important-black-txt {
@@ -78,18 +78,4 @@ a {
 
 .brand-txt {
   background-color: var(--brand);
-}
-
-@keyframes changeXPos {
-  from {
-    translate: 0px;
-  }
-
-  to {
-    translate: -2095px;
-  }
-}
-
-.banner {
-  animation: changeXPos 30s linear infinite;
 }

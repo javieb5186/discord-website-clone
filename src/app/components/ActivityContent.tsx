@@ -6,10 +6,7 @@ import activityImg from "assets/activity.png";
 
 export default function ActivityContent() {
   return (
-    <SectionBackground
-      paddingToTop
-      bgGradient={"radial-gradient(at 100% 100%, #3255eb, #000027)"}
-    >
+    <SectionBackground paddingToTop>
       <SectionCard
         inverse={true}
         image={{

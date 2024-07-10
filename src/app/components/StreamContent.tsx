@@ -6,9 +6,7 @@ import streamImg from "assets/stream.png";
 
 export default function StreamContent() {
   return (
-    <SectionBackground
-      bgGradient={"radial-gradient(at 100% 100%, #3255eb, #000027)"}
-    >
+    <SectionBackground>
       <SectionCard
         inverse={true}
         image={{

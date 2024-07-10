@@ -1,0 +1,229 @@
+@keyframes changeXPos {
+  from {
+    translate: 0px;
+  }
+
+  to {
+    translate: -2095px;
+  }
+}
+
+.banner {
+  animation: changeXPos 30s linear infinite;
+}
+
+@keyframes twinkleStar {
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+}
+
+.twinkle-star-1 {
+  animation: twinkleStar 5s linear infinite;
+}
+
+.twinkle-star-2 {
+  animation: twinkleStar 6s linear infinite;
+}
+
+.twinkle-star-3 {
+  animation: twinkleStar 7s linear infinite;
+}
+
+.twinkle-star-4 {
+  animation: twinkleStar 8s linear infinite;
+}
+
+.twinkle-star-5 {
+  animation: twinkleStar 9s linear infinite;
+}
+
+.twinkle-star-6 {
+  animation: twinkleStar 10s linear infinite;
+}
+
+@keyframes crown {
+  0% {
+    transform: rotate(25deg);
+  }
+
+  20% {
+    transform: rotate(40deg);
+  }
+
+  40% {
+    transform: rotate(35deg);
+  }
+
+  60% {
+    transform: rotate(40deg);
+  }
+
+  80% {
+    transform: rotate(35deg);
+  }
+
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
+.crown {
+  transform: rotate(25deg);
+  animation: crown 10s linear infinite;
+}
+
+@keyframes potion {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(5deg);
+  }
+
+  60% {
+    transform: rotate(15deg);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+.potion {
+  transform: rotate(-5deg);
+  animation: potion 11s linear infinite;
+}
+
+@keyframes fancyStar {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  20% {
+    transform: rotate(30deg);
+  }
+
+  40% {
+    transform: rotate(20deg);
+  }
+
+  60% {
+    transform: rotate(25deg);
+  }
+
+  80% {
+    transform: rotate(35deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.fancy-star {
+  transform: rotate(10deg);
+  animation: fancyStar 12s linear infinite;
+}
+
+@keyframes trophy {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(-5deg);
+  }
+
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  80% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.trophy {
+  transform: rotate(0deg);
+  animation: trophy 14s linear infinite;
+}
+
+@keyframes turnip {
+  0% {
+    transform: rotate(20deg);
+  }
+
+  20% {
+    transform: rotate(50deg);
+  }
+
+  40% {
+    transform: rotate(20deg);
+  }
+
+  60% {
+    transform: rotate(40deg);
+  }
+
+  80% {
+    transform: rotate(35deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.turnip {
+  transform: rotate(20deg);
+  animation: turnip 15s linear infinite;
+}
+
+@keyframes egg {
+  0% {
+    transform: translateY(0px);
+  }
+
+  10% {
+    transform: translateY(0px);
+  }
+
+  24% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+.egg {
+  animation: egg auto linear;
+  animation-timeline: scroll(root y);
+}

@@ -6,9 +6,7 @@ import platformsImg from "assets/platforms.png";
 
 export default function PlatformsContent() {
   return (
-    <SectionBackground
-      bgGradient={"radial-gradient(at 100% 100%, #3255eb, #000027)"}
-    >
+    <SectionBackground>
       <SectionCard
         inverse={false}
         image={{

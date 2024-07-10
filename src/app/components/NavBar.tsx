@@ -156,7 +156,7 @@ export default function NavBar() {
   };
 
   return (
-    <RBox boxProps={{ position: "absolute", top: "0", zIndex: 1 }}>
+    <RBox boxProps={{ position: "absolute", top: 0, zIndex: 2 }}>
       <Grid container alignItems={"center"} height={"5rem"} width={"100%"}>
         <Grid item xs={6} lg={2}>
           {!open && <LogoAndTitle color="white" />}
