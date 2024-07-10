@@ -1,3 +1,35 @@
+@keyframes showBackground {
+  from {
+    background-color: rgba(22, 28, 187, 0);
+  }
+
+  to {
+    background-color: rgba(22, 28, 187, 1);
+  }
+}
+
+.show-background {
+  animation: showBackground 0.2s linear forwards;
+}
+
+@keyframes hideBackground {
+  from {
+    background-color: rgba(22, 28, 187, 1);
+  }
+
+  to {
+    background-color: rgba(22, 28, 187, 0);
+  }
+}
+
+.hide-background {
+  animation: hideBackground 0.2s linear forwards;
+}
+
+.navbar-bg {
+  background-color: rgba(22, 28, 187, 0);
+}
+
 @keyframes changeXPos {
   from {
     translate: 0px;
