@@ -1,11 +1,15 @@
 // A section to be rendered for the root route
 
+"use client";
+import { useContext } from "react";
 import { Box } from "@mui/material";
+import { ScreenContext } from "store/ScreenContext";
 import Image from "next/image";
-import chatImg from "assets/chat-with-wumpus.png";
-import partyWumpusGif from "assets/party-wumpus.gif";
 import SectionCard from "./SectionCard";
 import SectionBackground from "./SectionBackground";
+import chatImg from "assets/chat-with-wumpus.png";
+import partyWumpusGif from "assets/party-wumpus.gif";
+import egg from "assets/egg.webp";
 
 function PartyWumpus() {
   return (
@@ -29,11 +33,32 @@ function PartyWumpus() {
   );
 }
 
+function Egg() {
+  const { mobile } = useContext(ScreenContext);
+  return (
+    <Box
+      position={"absolute"}
+      width={{ xs: "200px", sm: "400px", lg: "500px" }}
+      height={{ xs: "200px", sm: "400px", lg: "500px" }}
+      left={{ xs: 0, sm: -150, lg: -250 }}
+      bottom={{ xs: -150, sm: 0 }}
+      zIndex={-1}
+      className={mobile ? "" : "egg"}
+    >
+      <Image
+        src={egg}
+        alt="Dinosaur Egg"
+        sizes="100%"
+        fill
+        style={{ objectFit: "contain" }}
+      />
+    </Box>
+  );
+}
+
 export default function GroupChatContent() {
   return (
-    <SectionBackground
-      bgGradient={"radial-gradient(at 100% 0%, #3255eb, #000027)"}
-    >
+    <SectionBackground paddingToTop>
       <SectionCard
         OverlappingComponent={<PartyWumpus />}
         inverse={false}
@@ -45,7 +70,9 @@ export default function GroupChatContent() {
         body={
           "Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way."
         }
-      />
+      >
+        <Egg />
+      </SectionCard>
     </SectionBackground>
   );
 }

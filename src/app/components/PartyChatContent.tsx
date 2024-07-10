@@ -31,9 +31,7 @@ function DiscordBox() {
 
 export default function PartyChatContent() {
   return (
-    <SectionBackground
-      bgGradient={"radial-gradient(at 100% 0%, #3255eb, #000027)"}
-    >
+    <SectionBackground>
       <SectionCard
         OverlappingComponent={<DiscordBox />}
         inverse={false}

@@ -8,11 +8,17 @@ import useTextByDevice from "hooks/useTextByDevice";
 import DownloadIcon from "icons/DownloadIcon";
 import contentFooterImg from "assets/content-footer.webp";
 import Image from "next/image";
+import groupOfStars from "assets/group-of-stars.webp";
 
 export default function EndOfContent() {
   const [downloadText] = useTextByDevice();
   return (
-    <RBox bgGradient={"radial-gradient(at 100% 0%, #3255eb, #000027)"}>
+    <RBox
+      bgImage={{
+        backgroundImage: `url(${groupOfStars.src})`,
+        backgroundSize: "cover",
+      }}
+    >
       <Stack width={"100%"} justifyContent={"center"} spacing={5}>
         <Box component={"h2"} className="white-txt" textAlign="center">
           <Typography fontSize={{ xs: "1.5rem", sm: "2.25rem", md: "3rem" }}>

@@ -79,9 +79,7 @@ function PeopleBox() {
 
 export default function AllPurposeContent() {
   return (
-    <SectionBackground
-      bgGradient={"radial-gradient(at 100% 0%, #3255eb, #000027)"}
-    >
+    <SectionBackground>
       <SectionCard
         OverlappingComponent={<PeopleBox />}
         inverse={false}

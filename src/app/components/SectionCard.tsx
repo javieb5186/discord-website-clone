@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { RBox } from "globalComponents";
 import Image, { StaticImageData } from "next/image";
@@ -19,11 +20,12 @@ export default function SectionCard({
   image,
   title,
   body,
-}: Props) {
+  children,
+}: PropsWithChildren<Props>) {
   return (
     <RBox>
       <Box
-        maxWidth={"100%"}
+        width={"100%"}
         borderRadius={"3rem"}
         position={"relative"}
         zIndex={2}
@@ -41,16 +43,30 @@ export default function SectionCard({
         >
           <Grid
             container
-            p={"3rem 1rem 1rem"}
-            rowGap={{ xs: "1rem", sm: "3rem" }}
+            height={{
+              xs: "40rem",
+              sm: "40rem",
+              md: "30rem",
+              lg: "40rem",
+            }}
+            p={"1rem"}
           >
-            <Grid item xs={12} md={7} order={inverse ? 2 : { xs: 2, md: 1 }}>
+            <Grid
+              item
+              xs={12}
+              md={7}
+              height={{ xs: "auto", md: "100%" }}
+              order={inverse ? 2 : { xs: 2, md: 1 }}
+              display={"flex"}
+              justifyContent={{ xs: "flex-end", md: "center" }}
+            >
               <Box
                 display={"flex"}
                 position={"relative"}
                 width={"100%"}
-                height={{ xs: "200px", sm: "400px" }}
+                height={"100%"}
                 justifyContent={"center"}
+                alignContent={"center"}
                 borderRadius={"3rem"}
                 overflow={"hidden"}
               >
@@ -63,10 +79,16 @@ export default function SectionCard({
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} md={5} order={inverse ? 1 : { xs: 1, md: 2 }}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              height={{ xs: "33%", md: "100%" }}
+              order={inverse ? 1 : { xs: 1, md: 2 }}
+            >
               <Stack
                 height={"100%"}
-                px={{ xs: 4, md: 2 }}
+                px={{ xs: 4, sm: 2, md: 4, lg: 6 }}
                 spacing={1}
                 justifyContent={"center"}
                 className="white-txt"
@@ -74,16 +96,20 @@ export default function SectionCard({
                 <Typography
                   component={"h2"}
                   fontSize={{
-                    xs: "1.25rem",
-                    sm: "2rem",
+                    xs: "1.2rem",
+                    sm: "1.6rem",
+                    md: "2rem",
+                    lg: "2.5rem",
                   }}
                 >
                   {title}
                 </Typography>
                 <Typography
                   fontSize={{
-                    xs: "1rem",
-                    sm: "1.2rem",
+                    xs: ".9rem",
+                    sm: "1rem",
+                    md: "1.1rem",
+                    lg: "1.3rem",
                   }}
                 >
                   {body}
@@ -91,6 +117,7 @@ export default function SectionCard({
               </Stack>
             </Grid>
           </Grid>
+          {children}
         </Box>
       </Box>
     </RBox>

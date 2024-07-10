@@ -6,6 +6,8 @@ import { Grid, Typography, Stack, Box } from "@mui/material";
 import { isWindows, isMacOs } from "react-device-detect";
 import { SimpleButton } from "globalComponents";
 import { RBox } from "globalComponents";
+import AnimatedBg from "./AnimatedBg";
+import AnimatedImages from "./AnimatedImages";
 import useTextByDevice from "hooks/useTextByDevice";
 import DownloadIcon from "icons/DownloadIcon";
 import Image from "next/image";
@@ -63,7 +65,7 @@ export default function Hero() {
         });
   }, []);
   return (
-    <RBox bgGradient="radial-gradient(at 100% 100%, #3255eb, #000027)">
+    <RBox>
       <Stack
         minHeight={{ xs: "45rem", sm: "50rem" }}
         spacing={5}
@@ -154,6 +156,8 @@ export default function Hero() {
           </Stack>
         </Box>
       </Stack>
+      <AnimatedBg />
+      <AnimatedImages />
     </RBox>
   );
 }
