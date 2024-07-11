@@ -13,7 +13,7 @@ import japaneseImg from "assets/japan-flag.png";
 export const links = [
   {
     text: "Download",
-    href: "",
+    href: "/download",
   },
   {
     text: "Nitro",

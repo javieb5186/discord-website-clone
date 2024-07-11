@@ -1,13 +1,8 @@
 // A Custom MUI Link that accepts some props with a simple style.
 
 "use client";
-import { Link } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import Link from "next/link";
 import { PropsWithChildren } from "react";
-
-const UnstyledLink = styled(Link)({
-  textDecoration: "none",
-});
 
 interface Props {
   textColor: string;
@@ -24,10 +19,10 @@ export function SimpleLink({
   children,
 }: PropsWithChildren<Props>) {
   const align = center ? { display: "flex", alignItems: "center" } : {};
-  const sx = { ...align, color: textColor, height: height };
+  const style = { ...align, color: textColor, height: height };
   return (
-    <UnstyledLink href={href} sx={sx}>
+    <Link href={href} style={style}>
       {children}
-    </UnstyledLink>
+    </Link>
   );
 }
