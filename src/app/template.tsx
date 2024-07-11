@@ -1,12 +1,18 @@
 "use client";
 import { ScreenContext } from "store/ScreenContext";
 import getMedia from "utils/getMedia";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   // Access to theme breakpoints outside of MUI props
   const media = getMedia();
 
   return (
-    <ScreenContext.Provider value={media}>{children}</ScreenContext.Provider>
+    <ScreenContext.Provider value={media}>
+      <NavBar />
+      {children}
+      <Footer />
+    </ScreenContext.Provider>
   );
 }
