@@ -172,6 +172,7 @@ export default function NavBar() {
           delay = true;
           setTimeout(() => {
             delay = false;
+            console.log(window.scrollY);
             if (window.scrollY > 125) {
               background ? null : setBackground(true), setFirstChange(true);
             } else {
