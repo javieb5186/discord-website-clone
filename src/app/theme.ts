@@ -2,6 +2,11 @@
 import { createTheme } from "@mui/material";
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#5865f2",
+    },
+  },
   breakpoints: {
     // Breakpoints for getMedia and MUI to use
     values: {
