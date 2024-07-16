@@ -148,9 +148,6 @@ export default function NavBar() {
   // To control the displaying of Safety UI
   const [safety, setSafety] = useState(false);
 
-  const [background, setBackground] = useState(false);
-  const [firstChange, setFirstChange] = useState(false);
-
   // Handlers
   const handleDrawer = (newOpen: boolean) => {
     setOpen(newOpen);
@@ -159,42 +156,13 @@ export default function NavBar() {
     setSafety(toggle);
   };
 
-  useEffect(() => {
-    setFirstChange(false);
-  }, [desktop]);
-
-  useEffect(() => {
-    let delay = false;
-    setFirstChange(false);
-    !desktop &&
-      window.addEventListener("scroll", () => {
-        if (!delay) {
-          delay = true;
-          setTimeout(() => {
-            delay = false;
-            console.log(window.scrollY);
-            if (window.scrollY > 125) {
-              background ? null : setBackground(true), setFirstChange(true);
-            } else {
-              !background ? null : setBackground(false), setFirstChange(true);
-            }
-          }, 500);
-        }
-      });
-  }, [background]);
-
   return (
     <RBox
       boxProps={{
         position: { xs: "fixed", lg: "absolute" },
         top: 0,
         zIndex: 5,
-        className:
-          !desktop && firstChange
-            ? background
-              ? "show-navbar-bg"
-              : "hide-navbar-bg"
-            : "navbar-bg",
+        className: desktop ? "navbar-bg" : "mobile-navbar-bg",
       }}
     >
       <Grid container alignItems={"center"} height={"5rem"} width={"100%"}>

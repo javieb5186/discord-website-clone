@@ -1,31 +1,22 @@
-@keyframes showNavBarBg {
-  from {
+@keyframes navBarBg {
+  0% {
     background-color: rgba(22, 28, 187, 0);
   }
 
-  to {
+  5% {
+    background-color: rgba(22, 28, 187, 1);
+  }
+
+  100% {
     background-color: rgba(22, 28, 187, 1);
   }
 }
 
-.show-navbar-bg {
-  animation: showNavBarBg 0.2s linear forwards;
+.mobile-navbar-bg {
+  background-color: rgba(22, 28, 187, 0);
+  animation: navBarBg auto linear;
+  animation-timeline: scroll(root y);
 }
-
-@keyframes hideNavBarBg {
-  from {
-    background-color: rgba(22, 28, 187, 1);
-  }
-
-  to {
-    background-color: rgba(22, 28, 187, 0);
-  }
-}
-
-.hide-navbar-bg {
-  animation: hideNavBarBg 0.2s linear forwards;
-}
-
 .navbar-bg {
   background-color: rgba(22, 28, 187, 0);
 }
