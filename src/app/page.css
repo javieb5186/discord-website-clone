@@ -1,14 +1,14 @@
 @keyframes navBarBg {
   0% {
-    background-color: rgba(22, 28, 187, 0);
+    background-color: rgba(88, 101, 242, 0);
   }
 
-  5% {
-    background-color: rgba(22, 28, 187, 1);
+  2% {
+    background-color: rgba(88, 101, 242, 1);
   }
 
   100% {
-    background-color: rgba(22, 28, 187, 1);
+    background-color: rgba(88, 101, 242, 1);
   }
 }
 
