@@ -40,7 +40,7 @@ function Device() {
 }
 
 export default function Hero() {
-  const [btnTxt, requirementTxt] = useTextByDevice();
+  const { buttonText, requirementText } = useTextByDevice();
   const [DeviceIcon, setDeviceIcon] = useState(<></>);
 
   useEffect(() => {
@@ -110,13 +110,13 @@ export default function Hero() {
                         className="white-txt"
                         fontSize={{ xs: "1rem", md: "1.2rem" }}
                       >
-                        {btnTxt}
+                        {buttonText}
                       </Typography>
                     </Stack>
                   </SimpleButton>
                 </Box>
                 <Typography className="fade-in">
-                  {`${requirementTxt} or higher`}
+                  {`${requirementText} or higher`}
                 </Typography>
               </Stack>
             </Stack>

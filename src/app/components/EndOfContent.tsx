@@ -11,7 +11,7 @@ import Image from "next/image";
 import groupOfStars from "assets/group-of-stars.webp";
 
 export default function EndOfContent() {
-  const [downloadText] = useTextByDevice();
+  const { buttonText } = useTextByDevice();
   return (
     <RBox
       bgImage={{
@@ -49,7 +49,7 @@ export default function EndOfContent() {
                 className="download white-txt"
                 fontSize={{ xs: "1rem", md: "1.25rem" }}
               >
-                {downloadText}
+                {buttonText}
               </Typography>
             </Stack>
           </SimpleButton>

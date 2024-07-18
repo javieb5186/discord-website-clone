@@ -51,7 +51,7 @@ export default function Hero() {
     exists: false,
   };
 
-  const [downloadText] = useTextByDevice();
+  const { buttonText } = useTextByDevice();
   const [browserButton, setBrowserButton] = useState(initialValues);
 
   useEffect(() => {
@@ -148,7 +148,7 @@ export default function Hero() {
                   className="download black-txt"
                   fontSize={{ xs: "1rem", md: "1.25rem" }}
                 >
-                  {downloadText}
+                  {buttonText}
                 </Typography>
               </Stack>
             </SimpleButton>
