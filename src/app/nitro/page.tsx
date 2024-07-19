@@ -1,7 +1,10 @@
+import Hero from "./Hero";
+import "./page.css";
+
 export default function Nitro() {
   return (
     <>
-      <div>Nitro Page</div>
+      <Hero />
     </>
   );
 }
