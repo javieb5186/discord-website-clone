@@ -17,7 +17,7 @@ export const links = [
   },
   {
     text: "Nitro",
-    href: "",
+    href: "/nitro",
   },
   {
     text: "Discover",
