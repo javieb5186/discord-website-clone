@@ -51,8 +51,16 @@ a {
   background-color: white;
 }
 
+.important-white-bg {
+  background-color: white !important;
+}
+
 .black-bg {
   background-color: black;
+}
+
+.important-black-bg {
+  background-color: black !important;
 }
 
 .brand-bg {
