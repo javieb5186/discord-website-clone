@@ -126,7 +126,7 @@ export default function Plan() {
         width="100%"
         mb="10rem"
         minHeight="35rem"
-        sx={{ backgroundColor: "lightgray", borderRadius: "1rem" }}
+        sx={{ backgroundColor: "whitesmoke", borderRadius: "1rem" }}
         display="flex"
         justifyContent="center"
         alignContent="center"
