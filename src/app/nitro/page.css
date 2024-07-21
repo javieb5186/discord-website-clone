@@ -11,6 +11,16 @@
   height: 50rem;
 }
 
+.show-other-perks {
+  max-height: 150rem;
+  transition: max-height 0.25s linear;
+}
+
+.hide-other-perks {
+  max-height: 0rem;
+  transition: max-height 0.25s linear;
+}
+
 @media screen and (min-width: 1920px) {
   .nitro-hero {
     height: 38vw;

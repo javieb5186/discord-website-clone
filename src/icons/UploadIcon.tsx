@@ -1,0 +1,32 @@
+import { Box } from "@mui/material";
+import Icon from "./Icon";
+export default function UploadIcon({
+  width,
+  height,
+  title,
+  color,
+  className,
+}: Icon) {
+  return (
+    <Box width={width} display="flex" justifyContent="center">
+      <svg
+        width="20"
+        height="20"
+        role="img"
+        aria-label="upload"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        className={className}
+        style={{ height: height }}
+      >
+        {title && <title>{title}</title>}
+        <path
+          fill={color}
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M9.20917 0.37507L0.214952 11.5436C-0.128228 11.9697 -0.0523466 12.5866 0.384437 12.9214C0.561639 13.0573 0.780465 13.1311 1.00582 13.1311H4.97116V19.0187C4.97116 19.5607 5.42146 20 5.97693 20H14.0231C14.5786 20 15.0289 19.5607 15.0289 19.0187V13.1311H18.9942C19.5497 13.1311 20 12.6918 20 12.1498C20 11.93 19.9243 11.7165 19.7851 11.5436L10.7909 0.375072C10.4477 -0.0510704 9.81544 -0.125104 9.37866 0.209714C9.31561 0.258045 9.25871 0.313557 9.20917 0.37507Z"
+        />
+      </svg>
+    </Box>
+  );
+}
