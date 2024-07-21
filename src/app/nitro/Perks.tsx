@@ -3,94 +3,65 @@ import { useState } from "react";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import SubCards from "./SubCards";
 import { RBox, SimpleButton } from "globalComponents";
+import * as svgs from "./svgs";
 
 export default function Perks() {
   const perks = [
     {
       id: 1,
       title: "From clips to pics, share away with bigger file uploads",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.UploadPic,
     },
     {
       id: 2,
       title: "Stream apps and games in sweet, sweet HD",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.Stream,
     },
     {
       id: 3,
       title: "Hype and meme with custom emoji anywhere",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.Emojis,
     },
     {
       id: 4,
       title: "Unlock perks for your communities with 2 Server Boosts",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.ServerBoosts,
     },
     {
       id: 5,
       title: "Color Themes",
       body: "Add your vibe to Discord with unique theme colors.",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.ColorThemes,
     },
     {
       id: 6,
       title: "Special Shop Perks",
       body: "Enjoy member pricing plus Nitro exclusive items in the Shop.",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.Shop,
     },
     {
       id: 7,
       title: "Custom Profiles",
       body: "Use a different avatar, profile theme, banner, and bio in each of your servers.",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.Profiles,
     },
     {
       id: 8,
       title: "Custom Sounds Everywhere",
       body: "Use custom sounds and personalized entrance sounds across voice channels.",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.Sounds,
     },
     {
       id: 9,
       title: "Unlimited Super Reactions",
       body: "Hype up the chat with action-packed, animated reactions.",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.SuperReactions,
     },
     {
       id: 10,
       title: "More Backgrounds",
       body: "Customize video calls with your own video backgrounds.",
-      svg: {
-        src: "",
-        alt: "",
-      },
+      Svg: svgs.Backgrounds,
     },
   ];
 
@@ -109,14 +80,14 @@ export default function Perks() {
       <Typography
         variant="h2"
         component="h1"
-        mt={{ xs: "30rem", lg: "15rem" }}
+        mt={{ xs: "30rem", lg: "20rem" }}
         mb="2rem"
         textAlign="center"
       >
         Popular Nitro Perks
       </Typography>
       <Grid container spacing={2}>
-        {popularPerks.map(({ id, title }) => {
+        {popularPerks.map(({ id, title, Svg }) => {
           return (
             <Grid key={id} item xs={12} lg={6}>
               <Box
@@ -128,18 +99,19 @@ export default function Perks() {
                 <Stack
                   spacing={1}
                   height="100%"
-                  px="6rem"
+                  px={{ xs: "2rem", md: "6rem" }}
                   py="2rem"
                   textAlign="center"
                 >
-                  <Typography height="40%" fontSize="1.75rem">
+                  <Typography
+                    height="40%"
+                    fontSize={{ xs: "1.25rem", md: "1.5rem" }}
+                  >
                     {title}
                   </Typography>
-                  <Box
-                    width="100%"
-                    height="60%"
-                    sx={{ backgroundColor: "lightgray" }}
-                  ></Box>
+                  <Box width="100%" height="60%">
+                    <Svg />
+                  </Box>
                 </Stack>
               </Box>
             </Grid>
@@ -154,9 +126,9 @@ export default function Perks() {
         className={display ? "show-other-perks" : "hide-other-perks"}
       >
         <Grid container spacing={2}>
-          {otherPerks.map(({ id, title, body }) => {
+          {otherPerks.map(({ id, title, body, Svg }) => {
             return (
-              <Grid key={id} item xs={6} lg={4}>
+              <Grid key={id} item xs={12} sm={6} lg={4}>
                 <Box
                   width="100%"
                   height="20rem"
@@ -166,15 +138,13 @@ export default function Perks() {
                   <Stack
                     spacing={1}
                     height="100%"
-                    px="5rem"
+                    px={{ xs: "1rem", md: "5rem" }}
                     py="2rem"
                     textAlign="center"
                   >
-                    <Box
-                      width="100%"
-                      height="50%"
-                      sx={{ backgroundColor: "lightgray" }}
-                    ></Box>
+                    <Box width="100%" height="50%">
+                      <Svg />
+                    </Box>
                     <Typography
                       height="20%"
                       fontSize="1.1rem"

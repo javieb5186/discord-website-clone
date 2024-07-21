@@ -12,7 +12,7 @@
 }
 
 .show-other-perks {
-  max-height: 100rem;
+  max-height: 150rem;
   transition: max-height 0.25s linear;
 }
 

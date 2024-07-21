@@ -88,7 +88,7 @@ export default function SubCards() {
         rowGap={2}
         justifyContent="space-between"
         position="absolute"
-        top={{ xs: -500, lg: -200 }}
+        top={{ xs: -500, lg: -100 }}
         left={0}
         direction={{ lg: "row" }}
       >

@@ -1,5 +1,5 @@
 export default interface Icon {
-  width: string;
+  width?: string;
   color?: string;
   height?: string;
   title?: string;
