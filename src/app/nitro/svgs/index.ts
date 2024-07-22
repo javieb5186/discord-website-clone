@@ -8,6 +8,9 @@ import Profiles from "./Profiles";
 import Sounds from "./Sounds";
 import SuperReactions from "./SuperReactions";
 import Backgrounds from "./Backgrounds";
+import UnleashLeft from "./UnleashLeft";
+import UnleashRight from "./UnleashRight";
+import TwoSparkles from "./TwoSparkles";
 
 export {
   UploadPic,
@@ -20,4 +23,7 @@ export {
   Sounds,
   SuperReactions,
   Backgrounds,
+  UnleashLeft,
+  UnleashRight,
+  TwoSparkles,
 };
