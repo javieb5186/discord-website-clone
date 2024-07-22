@@ -21,7 +21,7 @@ export const links = [
   },
   {
     text: "Discover",
-    href: "",
+    href: "/servers",
   },
   {
     text: "Safety",
