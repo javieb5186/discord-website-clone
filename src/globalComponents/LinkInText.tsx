@@ -1,3 +1,7 @@
+// This is a component that takes a body of text and
+// specified links and converts it into a body of text
+// with those links
+
 import { Typography, Link } from "@mui/material";
 import { Fragment } from "react";
 
