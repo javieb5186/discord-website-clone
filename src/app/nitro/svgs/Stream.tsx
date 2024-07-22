@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function Stream({ height, title, className }: Icon) {
+export default function Stream() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -10,10 +9,7 @@ export default function Stream({ height, title, className }: Icon) {
         width="300"
         height="200"
         viewBox="0 0 300 200"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <path
           d="M5.27072 143.191L294.732 143.191C297.642 143.191 300 140.832 300 137.922V5.26997C300 2.35966 297.642 0.000411987 294.732 0.000411987L5.27072 0.000411987C2.36151 0.000411987 0.00311279 2.35966 0.00311279 5.26997V137.922C0.00311279 140.832 2.36151 143.191 5.27072 143.191Z"
           fill="#5865F2"
@@ -715,8 +711,8 @@ export default function Stream({ height, title, className }: Icon) {
         <path
           d="M83.6424 79.5703V82.1408C83.645 82.3249 83.5816 82.5038 83.4638 82.6453C83.346 82.7867 83.1815 82.8813 83 82.912H67.1971"
           stroke="#2F3849"
-          stroke-width="2.00882"
-          stroke-miterlimit="10"
+          strokeWidth="2.00882"
+          strokeMiterlimit="10"
         />
         <path
           d="M90.1949 75.8417C89.3109 74.6209 88.1529 73.6244 86.8142 72.9325C85.4754 72.2405 83.993 71.8723 82.4862 71.8574H69.6383C68.105 71.8574 66.6344 72.4668 65.5501 73.5514C64.4659 74.6361 63.8568 76.1072 63.8568 77.6411V88.0517C63.8568 89.0743 64.2629 90.0551 64.9857 90.7782C65.7085 91.5013 66.6889 91.9075 67.7112 91.9075H86.212C87.7234 91.9079 89.1748 91.3162 90.2554 90.2592C91.336 89.2022 91.96 87.7639 91.9936 86.2523V81.3684C92.0121 79.3793 91.3805 77.4386 90.1949 75.8417Z"

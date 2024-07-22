@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function Sounds({ height, title, className }: Icon) {
+export default function Sounds() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -10,10 +9,7 @@ export default function Sounds({ height, title, className }: Icon) {
         width="164"
         height="132"
         viewBox="0 0 164 132"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <g clipPath="url(#clip0_19865_129263)">
           <path
             opacity="0.7"

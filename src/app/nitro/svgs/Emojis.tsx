@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function Emojis({ height, title, className }: Icon) {
+export default function Emojis() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -10,10 +9,7 @@ export default function Emojis({ height, title, className }: Icon) {
         width="400"
         height="201"
         viewBox="0 0 400 201"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <path
           d="M390.975 3.93945H9.02551C6.24028 3.93945 3.98242 6.17304 3.98242 8.92832V192.046C3.98242 194.801 6.24028 197.035 9.02551 197.035H390.975C393.76 197.035 396.018 194.801 396.018 192.046V8.92832C396.018 6.17304 393.76 3.93945 390.975 3.93945Z"
           fill="#2F3136"
@@ -93,7 +89,7 @@ export default function Emojis({ height, title, className }: Icon) {
         <path
           d="M11 109H31.0397V109.525H11V109Z"
           fill="#4F545C"
-          fill-opacity="0.48"
+          fillOpacity="0.48"
         />
         <path
           fillRule="evenodd"
@@ -108,7 +104,7 @@ export default function Emojis({ height, title, className }: Icon) {
         <path
           d="M11 161.525H31.0397V162.051H11V161.525Z"
           fill="#4F545C"
-          fill-opacity="0.48"
+          fillOpacity="0.48"
         />
         <path
           fillRule="evenodd"
@@ -119,7 +115,7 @@ export default function Emojis({ height, title, className }: Icon) {
         <path
           d="M26.2784 73.127H16.4577C13.6724 73.127 11.4146 75.3605 11.4146 78.1158V87.8835C11.4146 90.6388 13.6724 92.8724 16.4577 92.8724H26.2784C29.0637 92.8724 31.3216 90.6388 31.3216 87.8835V78.1158C31.3216 75.3605 29.0637 73.127 26.2784 73.127Z"
           fill="#4F545C"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
         <path
           d="M20.3086 77.6683C20.5262 76.9986 21.4737 76.9986 21.6913 77.6683L22.7952 81.0657H26.3674C27.0716 81.0657 27.3644 81.9668 26.7947 82.3807L23.9047 84.4804L25.0086 87.8778C25.2262 88.5476 24.4597 89.1045 23.89 88.6906L21 86.5908L18.1099 88.6906C17.5403 89.1045 16.7737 88.5476 16.9913 87.8778L18.0952 84.4804L15.2052 82.3807C14.6355 81.9668 14.9283 81.0657 15.6325 81.0657H19.2047L20.3086 77.6683Z"

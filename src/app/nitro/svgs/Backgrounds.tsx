@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function Backgrounds({ height, title, className }: Icon) {
+export default function Backgrounds() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -10,10 +9,7 @@ export default function Backgrounds({ height, title, className }: Icon) {
         width="222"
         height="132"
         viewBox="0 0 222 132"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <g clipPath="url(#clip0_26602_17873)">
           <path
             d="M214 0H8C3.58172 0 0 3.58172 0 8V124C0 128.418 3.58172 132 8 132H214C218.418 132 222 128.418 222 124V8C222 3.58172 218.418 0 214 0Z"

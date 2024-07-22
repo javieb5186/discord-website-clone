@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function ServerBoosts({ height, title, className }: Icon) {
+export default function ServerBoosts() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -10,10 +9,7 @@ export default function ServerBoosts({ height, title, className }: Icon) {
         width="300"
         height="200"
         viewBox="0 0 300 200"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <g clipPath="url(#clip0_14123_103289)">
           <rect
             width="300"
@@ -304,7 +300,7 @@ export default function ServerBoosts({ height, title, className }: Icon) {
           <path
             d="M150.5 158C180.611 158 205 133.387 205 103C205 72.6125 180.611 48 150.5 48C120.389 48 96 72.6125 96 103C96 133.387 120.389 158 150.5 158Z"
             fill="#3E70DD"
-            fill-opacity="0.6"
+            fillOpacity="0.6"
           />
           <path
             d="M196.987 78.9593L241.625 71.125L227.827 89.2675C225.136 92.8411 221.204 95.1776 216.788 96.0023L185.397 101.5L184.5 96.6208L196.987 78.9593Z"

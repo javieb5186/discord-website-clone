@@ -3,68 +3,9 @@ import { useState } from "react";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import SubCards from "./SubCards";
 import { RBox, SimpleButton } from "globalComponents";
-import * as svgs from "./svgs";
+import { perks } from "./data";
 
 export default function Perks() {
-  const perks = [
-    {
-      id: 1,
-      title: "From clips to pics, share away with bigger file uploads",
-      Svg: svgs.UploadPic,
-    },
-    {
-      id: 2,
-      title: "Stream apps and games in sweet, sweet HD",
-      Svg: svgs.Stream,
-    },
-    {
-      id: 3,
-      title: "Hype and meme with custom emoji anywhere",
-      Svg: svgs.Emojis,
-    },
-    {
-      id: 4,
-      title: "Unlock perks for your communities with 2 Server Boosts",
-      Svg: svgs.ServerBoosts,
-    },
-    {
-      id: 5,
-      title: "Color Themes",
-      body: "Add your vibe to Discord with unique theme colors.",
-      Svg: svgs.ColorThemes,
-    },
-    {
-      id: 6,
-      title: "Special Shop Perks",
-      body: "Enjoy member pricing plus Nitro exclusive items in the Shop.",
-      Svg: svgs.Shop,
-    },
-    {
-      id: 7,
-      title: "Custom Profiles",
-      body: "Use a different avatar, profile theme, banner, and bio in each of your servers.",
-      Svg: svgs.Profiles,
-    },
-    {
-      id: 8,
-      title: "Custom Sounds Everywhere",
-      body: "Use custom sounds and personalized entrance sounds across voice channels.",
-      Svg: svgs.Sounds,
-    },
-    {
-      id: 9,
-      title: "Unlimited Super Reactions",
-      body: "Hype up the chat with action-packed, animated reactions.",
-      Svg: svgs.SuperReactions,
-    },
-    {
-      id: 10,
-      title: "More Backgrounds",
-      body: "Customize video calls with your own video backgrounds.",
-      Svg: svgs.Backgrounds,
-    },
-  ];
-
   const popularPerks = perks.filter((perk) => !perk.body);
   const otherPerks = perks.filter((perk) => perk.body);
 
