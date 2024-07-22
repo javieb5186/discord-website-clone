@@ -1,4 +1,4 @@
-// subscription cards
+// Subscription cards
 import {
   Box,
   Stack,
@@ -8,73 +8,9 @@ import {
   CardContent,
 } from "@mui/material";
 import { SimpleButton } from "globalComponents";
-import UploadIcon from "icons/UploadIcon";
+import { cards } from "./data";
 
 export default function SubCards() {
-  const cards = [
-    {
-      title: "Nitro Basic",
-      backgroundColor: "#4157d5",
-      features: [
-        {
-          id: 1,
-          text: "50Mb Uploads",
-          Icon: UploadIcon,
-        },
-        {
-          id: 2,
-          text: "Custom Emoji anywhere",
-          Icon: UploadIcon,
-        },
-        {
-          id: 3,
-          text: "Unlimited super reactions",
-          Icon: UploadIcon,
-        },
-        {
-          id: 4,
-          text: "Special Nitro Badge on your profile",
-          Icon: UploadIcon,
-        },
-      ],
-    },
-    {
-      title: "Nitro",
-      backgroundImage: "linear-gradient(to top left, #ac5d8b, #8647c6)",
-      features: [
-        {
-          id: 1,
-          text: "500Mb Uploads",
-          Icon: UploadIcon,
-        },
-        {
-          id: 2,
-          text: "Custom Emoji anywhere",
-          Icon: UploadIcon,
-        },
-        {
-          id: 3,
-          text: "Unlimited super reactions",
-          Icon: UploadIcon,
-        },
-        {
-          id: 4,
-          text: "HD video streaming",
-          Icon: UploadIcon,
-        },
-        {
-          id: 5,
-          text: "HD video streaming",
-          Icon: UploadIcon,
-        },
-        {
-          id: 6,
-          text: "HD video streaming",
-          Icon: UploadIcon,
-        },
-      ],
-    },
-  ];
   return (
     <Box
       width="100%"

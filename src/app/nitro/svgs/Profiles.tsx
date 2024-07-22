@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function Profiles({ height, title, className }: Icon) {
+export default function Profiles() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -11,10 +10,7 @@ export default function Profiles({ height, title, className }: Icon) {
         width="196"
         height="127"
         viewBox="0 0 196 127"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <g filter="url(#filter0_d_14847_11779)">
           <path
             d="M3.57055 37.7508C2.42702 33.4831 4.95968 29.0964 9.22741 27.9529L105.82 2.07098C110.088 0.927445 114.474 3.46011 115.618 7.72783L143.829 113.014C144.973 117.281 142.44 121.668 138.172 122.812L41.5798 148.694C37.3121 149.837 32.9254 147.304 31.7818 143.037L3.57055 37.7508Z"

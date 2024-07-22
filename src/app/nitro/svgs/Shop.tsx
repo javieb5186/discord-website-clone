@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function Shop({ height, title, className }: Icon) {
+export default function Shop() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -10,10 +9,7 @@ export default function Shop({ height, title, className }: Icon) {
         width="185"
         height="140"
         viewBox="0 0 185 140"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <g clipPath="url(#clip0_9008_171205)">
           <rect
             y="-63"

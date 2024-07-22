@@ -25,6 +25,26 @@
   color: darkgr;
 }
 
+.MuiAccordion-root::before {
+  display: none;
+}
+
+.show-accordion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease 0.2s;
+}
+
+.hide-accordion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 @media screen and (min-width: 1920px) {
   .nitro-hero {
     height: 38vw;

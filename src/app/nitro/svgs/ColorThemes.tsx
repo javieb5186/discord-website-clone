@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
-export default function ColorThemes({ height, title, className }: Icon) {
+export default function ColorThemes() {
   return (
     <Box display="flex" justifyContent="center">
       <svg
@@ -11,10 +10,7 @@ export default function ColorThemes({ height, title, className }: Icon) {
         width="181"
         height="127"
         viewBox="0 0 181 127"
-        className={className}
-        style={{ height: height }}
       >
-        {title && <title>{title}</title>}
         <g clipPath="url(#clip0_18348_119811)">
           <mask
             id="mask0_18348_119811"

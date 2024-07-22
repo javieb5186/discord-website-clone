@@ -6,117 +6,7 @@ import { RBox } from "globalComponents";
 import CheckmarkIcon from "icons/CheckmarkIcon";
 import XMarkIcon from "icons/XMarkIcon";
 import { ScreenContext } from "store/ScreenContext";
-
-const features = [
-  {
-    id: 1,
-    description: "Unlimited Super Reactions",
-    compare1: true,
-    compare2: true,
-  },
-  {
-    id: 2,
-    description: "Custom emoji anywhere and make them animated",
-    compare1: true,
-    compare2: true,
-  },
-  {
-    id: 3,
-    description: "Custom stickers anywhere",
-    compare1: true,
-    compare2: true,
-  },
-  {
-    id: 4,
-    description: "Custom App icons",
-    compare1: true,
-    compare2: true,
-  },
-  {
-    id: 5,
-    description: "Bigger File Sharing",
-    compare1: "50MB",
-    compare2: "500MB",
-  },
-  {
-    id: 6,
-    description: "HD streaming",
-    compare1: false,
-    compare2: "Up to 4K and 60fps",
-  },
-  {
-    id: 7,
-    description: "2 Free Boosts + 30% off extra Boosts",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 8,
-    description: "Animated avatar, banner, and profile theme",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 9,
-    description: "Early access to Clips",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 10,
-    description: "Custom Server Profiles",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 11,
-    description: "Nitro Badge on your profile",
-    compare1: true,
-    compare2: true,
-  },
-  {
-    id: 12,
-    description: "Custom Video Backgrounds",
-    compare1: true,
-    compare2: true,
-  },
-  {
-    id: 13,
-    description: "Join up to 200 servers",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 14,
-    description: "Longer messages up to 4,000 characters",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 15,
-    description: "Colors for you Discord Theme",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 16,
-    description: "Custom sounds anywhere",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 17,
-    description: "Personalized entrance sounds",
-    compare1: false,
-    compare2: true,
-  },
-  {
-    id: 18,
-    description: "Shop member pricing and exclusive items",
-    compare1: false,
-    compare2: true,
-  },
-];
+import { features } from "./data";
 
 export default function Plan() {
   const { laptop, desktop } = useContext(ScreenContext);
@@ -124,7 +14,7 @@ export default function Plan() {
     <RBox bgColor="white">
       <Box
         width="100%"
-        mb="10rem"
+        mb="5rem"
         minHeight="35rem"
         sx={{ backgroundColor: "whitesmoke", borderRadius: "1rem" }}
         display="flex"
