@@ -1,9 +1,10 @@
 import "./page.css";
+import Hero from "./Hero";
 
 export default function Servers() {
   return (
     <>
-      <div>Servers</div>
+      <Hero />
     </>
   );
 }
