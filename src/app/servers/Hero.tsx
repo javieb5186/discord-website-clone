@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { RBox } from "globalComponents";
-import HeroLeft from "./assets/HeroLeft";
-import HeroRight from "./assets/HeroRight";
+import HeroLeft from "./svgs/HeroLeft";
+import HeroRight from "./svgs/HeroRight";
 import heroBg from "./assets/discover-hero-bg.svg";
 
 export default function Hero() {
