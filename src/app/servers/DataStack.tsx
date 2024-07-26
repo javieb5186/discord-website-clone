@@ -4,7 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import PartneredIcon from "./svgs/PartneredIcon";
 import VerifiedIcon from "./svgs/VerifiedIcon";
 import createData from "utils/createData";
-import Skeleton from "./skeleton";
+import Skeleton from "./Skeleton";
 
 interface Data {
   icon: string;
