@@ -1,7 +1,6 @@
-import { Box, Stack, Grid, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { RBox, SimpleButton } from "globalComponents";
-import channels from "./svgs/belong.svg";
-import Image from "next/image";
+import channels from "./assets/belong.svg";
 
 export default function Belong() {
   return (
