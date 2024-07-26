@@ -1,1 +1,65 @@
+@keyframes sparkles1 {
+  0% {
+    transform: scale(1);
+  }
 
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-sparkles1 {
+  animation: sparkles1 1.9s linear infinite;
+}
+
+@keyframes sparkles2 {
+  0% {
+    transform: scale(-1);
+  }
+
+  50% {
+    transform: scale(-1.1);
+  }
+
+  100% {
+    transform: scale(-1);
+  }
+}
+
+.animate-sparkles2 {
+  animation: sparkles2 1.7s linear infinite;
+}
+
+@media screen and (max-width: 767px) {
+  @keyframes sparkles1 {
+    0% {
+      transform: scale(0.5);
+    }
+
+    50% {
+      transform: scale(0.7);
+    }
+
+    100% {
+      transform: scale(0.5);
+    }
+  }
+
+  @keyframes sparkles2 {
+    0% {
+      transform: scale(-0.5);
+    }
+
+    50% {
+      transform: scale(-0.7);
+    }
+
+    100% {
+      transform: scale(-0.5);
+    }
+  }
+}

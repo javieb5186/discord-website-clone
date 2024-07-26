@@ -13,10 +13,9 @@ import {
 import ChevronDownIcon from "icons/ChevronDownIcon";
 import { RBox, LinkInText } from "globalComponents";
 import BunnyHuman from "./svgs/BunnyHuman";
-import Sparkles from "./svgs/Sparkles";
+import Sparkles from "../../icons/Sparkles";
 import { tabs } from "./data";
 import { ScreenContext } from "store/ScreenContext";
-import Link from "next/link";
 
 export default function FAQs() {
   // Used to have one open accordion at a time
