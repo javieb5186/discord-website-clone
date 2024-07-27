@@ -147,7 +147,12 @@ export default function FAQs() {
                       </AccordionSummary>
                       <AccordionDetails sx={{ fontSize: ".9rem" }}>
                         {links ? (
-                          <LinkInText text={body} links={links} />
+                          <LinkInText
+                            color="white"
+                            hasUnderline
+                            text={body}
+                            links={links}
+                          />
                         ) : (
                           body
                         )}
