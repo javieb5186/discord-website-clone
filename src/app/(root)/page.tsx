@@ -9,6 +9,7 @@ import AllPurposeContent from "./components/AllPurposeContent";
 import PlatformsContent from "./components/PlatformsContent";
 import EndOfContent from "./components/EndOfContent";
 import mainPageBg from "assets/main-page-bg.webp";
+import "./page.css";
 
 export default function Home() {
   return (

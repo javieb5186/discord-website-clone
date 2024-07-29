@@ -3,7 +3,6 @@
 import { Box, Stack } from "@mui/material";
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
-import groupVideoChatImg from "assets/group-video-chat.png";
 import womenTopImg from "assets/woman-top.webp";
 import womenBottomImg from "assets/woman-bottom.webp";
 import men from "assets/men.webp";

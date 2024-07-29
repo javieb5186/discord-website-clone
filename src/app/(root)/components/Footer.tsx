@@ -15,7 +15,7 @@ import {
   ListItemIcon,
 } from "@mui/material";
 import { RBox, SimpleButton, LeftAlignedButton } from "globalComponents";
-import { languages, navigationLinks } from "app/data";
+import { languages, navigationLinks } from "../data";
 import { ScreenContext } from "store/ScreenContext";
 import Image from "next/image";
 import ChevronDownIcon from "icons/ChevronDownIcon";
