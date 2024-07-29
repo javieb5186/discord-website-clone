@@ -1,5 +1,13 @@
 :root {
   --cardWidth: 55rem;
+  --imgWidth: 40rem;
+}
+
+@media screen and (min-width: 364px) {
+  :root {
+    --cardWidth: 55rem;
+    --imgWidth: 100%;
+  }
 }
 
 .animate-grid1 {
@@ -37,6 +45,68 @@
 
 .animate-grid7 {
   transform: translateX(calc(var(--cardWidth) * 3));
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+
+.animate-img1 {
+  transform: translateX(calc(var(--imgWidth) * -6));
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+
+.animate-img2 {
+  transform: translateX(calc(var(--imgWidth) * -5));
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+
+.animate-img3 {
+  transform: translateX(calc(var(--imgWidth) * -4));
+  transition: transform 0.5s ease;
+}
+
+.animate-img4 {
+  transform: translateX(calc(var(--imgWidth) * -3));
+  transition: transform 0.5s ease;
+}
+
+.animate-img5 {
+  transform: translateX(calc(var(--imgWidth) * -2));
+  transition: transform 0.5s ease;
+}
+
+.animate-img6 {
+  transform: translateX(calc(var(--imgWidth) * -1));
+  transition: transform 0.5s ease;
+}
+
+.animate-img7 {
+  transform: translateX(0rem);
+  transition: transform 0.5s ease;
+}
+
+.animate-img8 {
+  transform: translateX(calc(var(--imgWidth) * 1));
+  transition: transform 0.5s ease;
+}
+.animate-img9 {
+  transform: translateX(calc(var(--imgWidth) * 2));
+  transition: transform 0.5s ease;
+}
+.animate-img10 {
+  transform: translateX(calc(var(--imgWidth) * 3));
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+.animate-img11 {
+  transform: translateX(calc(var(--imgWidth) * 4));
+  transition: transform 0.5s ease;
+  opacity: 0;
+}
+
+.animate-img12 {
+  transform: translateX(calc(var(--imgWidth) * 5));
   transition: transform 0.5s ease;
   opacity: 0;
 }
