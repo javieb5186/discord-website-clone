@@ -605,7 +605,7 @@ export default function Jobs() {
                           alignItems={"center"}
                           justifyContent={"center"}
                         >
-                          <Box width={{ xs: "75%", md: "100%" }} p={"1rem"}>
+                          <Box width={{ xs: "50%", md: "100%" }} p={"1rem"}>
                             <img
                               src={img.src}
                               alt=""
@@ -625,9 +625,7 @@ export default function Jobs() {
                             >
                               {title}
                             </Typography>
-                            <Typography fontSize={{ xs: ".9rem", sm: "1rem" }}>
-                              {body}
-                            </Typography>
+                            <Typography fontSize={".9rem"}>{body}</Typography>
                           </Stack>
                         </Grid>
                       </Grid>
