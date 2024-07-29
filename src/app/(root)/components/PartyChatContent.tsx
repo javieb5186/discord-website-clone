@@ -3,7 +3,6 @@
 import { Box } from "@mui/material";
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
-import partyChatImg from "assets/party-chat.png";
 import discordBoxImg from "assets/discord-box.webp";
 import Image from "next/image";
 

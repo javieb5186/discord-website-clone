@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 import { useContext } from "react";
 import { ScreenContext } from "store/ScreenContext";
 import crown from "assets/crown.webp";

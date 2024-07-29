@@ -2,7 +2,7 @@
 // Drawer base component courtesy of MUI main docs
 
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Stack,
   Grid,
@@ -18,7 +18,7 @@ import { SimpleButton } from "globalComponents";
 import { RBox } from "globalComponents";
 import { useContext } from "react";
 import { ScreenContext } from "store/ScreenContext";
-import { links, safetyLinks } from "app/data";
+import { links, safetyLinks } from "../data";
 import MenuIcon from "icons/MenuIcon";
 import CloseIcon from "icons/CloseIcon";
 import LogoAndTitle from "globalComponents/LogoAndTitle";

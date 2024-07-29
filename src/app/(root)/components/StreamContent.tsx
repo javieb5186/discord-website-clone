@@ -2,7 +2,6 @@
 
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
-import streamImg from "assets/stream.png";
 
 export default function StreamContent() {
   return (

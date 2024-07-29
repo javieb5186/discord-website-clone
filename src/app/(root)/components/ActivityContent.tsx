@@ -2,7 +2,6 @@
 
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
-import activityImg from "assets/activity.png";
 
 export default function ActivityContent() {
   return (

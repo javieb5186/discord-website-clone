@@ -2,7 +2,6 @@
 
 import SectionBackground from "./SectionBackground";
 import SectionCard from "./SectionCard";
-import platformsImg from "assets/platforms.png";
 
 export default function PlatformsContent() {
   return (

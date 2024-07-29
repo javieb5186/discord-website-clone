@@ -13,7 +13,7 @@ import {
 import ChevronDownIcon from "icons/ChevronDownIcon";
 import { RBox, LinkInText } from "globalComponents";
 import BunnyHuman from "./svgs/BunnyHuman";
-import Sparkles from "../../icons/Sparkles";
+import Sparkles from "../../../icons/Sparkles";
 import { tabs } from "./data";
 import { ScreenContext } from "store/ScreenContext";
 

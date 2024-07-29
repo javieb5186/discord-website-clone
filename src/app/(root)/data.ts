@@ -30,7 +30,7 @@ export const links = [
 
   {
     text: "Support",
-    href: "",
+    href: "/support",
   },
   {
     text: "Blog",
