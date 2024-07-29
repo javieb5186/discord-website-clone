@@ -1,6 +1,7 @@
 import Hero from "./Hero";
 import Internships from "./Interships";
 import Jobs from "./Jobs";
+import DiscordLife from "./DiscordLife";
 import "./page.css";
 
 export default function Careers() {
@@ -9,6 +10,7 @@ export default function Careers() {
       <Hero />
       <Internships />
       <Jobs />
+      <DiscordLife />
     </>
   );
 }
