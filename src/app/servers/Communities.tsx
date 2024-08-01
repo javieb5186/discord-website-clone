@@ -9,7 +9,7 @@ import {
   PaginationItem,
 } from "@mui/material";
 import { RBox, SimpleButton } from "globalComponents";
-import SearchIcon from "./svgs/Search";
+import SearchIcon from "../../icons/Search";
 import ForwardArrowIcon from "icons/ForwardArrowIcon";
 import BackArrowIcon from "icons/BackArrowIcon";
 import AllIcon from "./svgs/AllIcon";

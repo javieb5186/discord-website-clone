@@ -35,7 +35,6 @@ export default function RootLayout({
           {/* Check out ./theme.ts to see theme in it's entirety */}
         </AppRouterCacheProvider>
         <Script id="id" src="./htmx.min.js" />
-        <Script src="./handlePerk.js" />
       </body>
     </html>
   );
