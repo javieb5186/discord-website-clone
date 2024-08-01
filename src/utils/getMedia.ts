@@ -2,7 +2,7 @@
 
 "use client";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import theme from "app/theme";
+import theme from "./theme";
 
 export default function getMedia() {
   const mobile = useMediaQuery(theme.breakpoints.up("xs"));

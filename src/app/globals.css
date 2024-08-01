@@ -1,5 +1,9 @@
 :root {
   --brand: #5865f2;
+  --mobile: 0px;
+  --tablet: 477px;
+  --laptop: 767px;
+  --desktop: 992px;
 }
 
 * {
@@ -20,14 +24,16 @@ a {
   text-decoration: none;
 }
 
-.desktop-screen {
-  max-width: 75rem;
-  width: 100%;
-  margin: 0 4rem;
+.screen {
+  width: 95vw;
 }
 
-.mobile-screen {
-  width: 95vw;
+@media screen and (min-width: 992px) {
+  .screen {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 4rem;
+  }
 }
 
 .important-black-txt {

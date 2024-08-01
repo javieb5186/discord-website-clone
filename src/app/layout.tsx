@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
+import Head from "next/head";
 import "./globals.css";
-import theme from "./theme";
+import theme from "utils/theme";
+import Script from "next/script";
+
+console.log(theme);
 
 // Font from Google
 const inter = Inter({ subsets: ["latin"] });
@@ -21,12 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="stylesheet" type="text/css" href={"htmx.css"} />
+      </Head>
       <body className={inter.className}>
         {/* Provider is necessary for MUI to integrate with NextJS */}
         <AppRouterCacheProvider>
-          {/* Check out ./theme.ts to see theme in it's entirety */}
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          {/* Check out ./theme.ts to see theme in it's entirety */}
         </AppRouterCacheProvider>
+        <Script id="id" src="./htmx.min.js" />
+        <Script src="./handlePerk.js" />
       </body>
     </html>
   );
