@@ -8,7 +8,12 @@ export default function MenuIcon({
   className,
 }: Icon) {
   return (
-    <Box width={width} display={"flex"} justifyContent={"center"}>
+    <Box
+      width={width}
+      display={"flex"}
+      justifyContent={"center"}
+      alignItems={"center"}
+    >
       <svg
         role="img"
         aria-label="menu"

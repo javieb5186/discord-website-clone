@@ -1,0 +1,62 @@
+.nitro-hero-video {
+  top: -3%;
+  left: -25%;
+}
+
+.nitro-hero {
+  height: 50rem;
+}
+
+.nitro-text-container {
+  height: 50rem;
+}
+
+.show-other-perks {
+  max-height: 150rem;
+  transition: max-height 0.25s linear;
+}
+
+.hide-other-perks {
+  max-height: 0rem;
+  transition: max-height 0.25s linear;
+}
+
+.faded-xmark {
+  color: darkgr;
+}
+
+.MuiAccordion-root::before {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  .nitro-hero {
+    height: 38vw;
+  }
+
+  .nitro-text-container {
+    height: 36vw;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .nitro-hero-video {
+    top: -12%;
+    left: -25%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .nitro-hero-video {
+    top: -16%;
+    left: -9%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .nitro-hero-video {
+    width: 100%;
+    top: -9vw;
+    left: -8%;
+  }
+}
