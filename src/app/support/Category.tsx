@@ -72,15 +72,13 @@ export default function Category() {
           >
             Need help? We've got your back.
           </Typography>
-          <Typography>
-            <LinkInText
-              text={
-                "From account settings to permissions, find help for everything Discord If you're new to Discord and looking for tips, check out our Beginner's Guide"
-              }
-              color={"#5865f2"}
-              links={[{ link: "Beginner's Guide", href: "" }]}
-            />
-          </Typography>
+          <LinkInText
+            text={
+              "From account settings to permissions, find help for everything Discord If you're new to Discord and looking for tips, check out our Beginner's Guide"
+            }
+            color={"#5865f2"}
+            links={[{ link: "Beginner's Guide", href: "" }]}
+          />
         </Stack>
         <Stack
           direction={"row"}

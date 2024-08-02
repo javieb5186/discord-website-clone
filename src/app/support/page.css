@@ -6,3 +6,11 @@
 .link:hover {
   text-decoration: underline;
 }
+
+.device {
+  opacity: 0.5;
+}
+
+.device:hover {
+  opacity: 1;
+}
