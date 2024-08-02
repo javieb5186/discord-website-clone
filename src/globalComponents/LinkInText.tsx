@@ -2,7 +2,8 @@
 // specified links and converts it into a body of text
 // with those links
 
-import { Typography, Link } from "@mui/material";
+import { Typography } from "@mui/material";
+import Link from "next/link";
 import { Fragment } from "react";
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
     link: string;
     href: string;
   }[];
+  fontSize?: string;
 }
 
 interface OrderedText {
@@ -24,6 +26,7 @@ export default function LinkInText({
   text,
   links,
   color,
+  fontSize,
   hasUnderline = false,
 }: Props) {
   let linkStartIndex = 0;
@@ -46,17 +49,18 @@ export default function LinkInText({
   });
 
   return (
-    <Typography>
+    <Typography fontSize={fontSize}>
       {orderedText.map(({ link, text }, index) => {
         return (
           <Fragment key={index}>
             {text}
             <Link
               href={""}
-              sx={{
+              style={{
                 textDecoration: hasUnderline ? "underline" : "none",
                 textDecorationColor: color,
                 color: color,
+                fontSize: fontSize,
               }}
             >
               {link}

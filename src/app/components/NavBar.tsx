@@ -187,7 +187,7 @@ export default function NavBar() {
           {/* Change from mobile UI to desktop UI based on media */}
           <LinkButton
             display={{ xs: "none", lg: "initial" }}
-            href=""
+            href="/login"
             className="white-bg important-black-txt"
           >
             Login
@@ -198,7 +198,7 @@ export default function NavBar() {
             spacing={1}
             alignItems={"center"}
           >
-            <LinkButton href="" className="white-bg important-black-txt">
+            <LinkButton href="/login" className="white-bg important-black-txt">
               Login
             </LinkButton>
             <Button
