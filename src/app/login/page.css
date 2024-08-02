@@ -1,0 +1,21 @@
+.login-link {
+  color: #00a8fb;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.login-link:hover {
+  color: #00a8fb;
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
