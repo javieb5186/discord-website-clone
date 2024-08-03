@@ -16,7 +16,7 @@ import {
 import { RBox } from "globalComponents";
 import LogoAndTitle from "globalComponents/LogoAndTitle";
 import ChevronDownIcon from "icons/ChevronDownIcon";
-import menu from "./assets/menu.svg";
+import menu from "assets/menu.svg";
 import Link from "next/link";
 
 const navItems = [
