@@ -63,7 +63,7 @@ export default function Hero() {
                 textAlign={{ xs: "center", lg: "left" }}
                 fontSize={{ xs: "1.5rem", sm: "2.25rem", lg: "3rem" }}
               >
-                GROUP CHAT THAT'S ALL FUN & GAMES
+                GROUP CHAT THAT&apos;S ALL FUN & GAMES
               </Typography>
               <Typography
                 fontSize={{ xs: "1rem", sm: "1.25rem", lg: "1.5rem" }}

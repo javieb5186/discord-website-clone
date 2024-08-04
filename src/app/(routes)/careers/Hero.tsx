@@ -7,6 +7,7 @@ import {
   bottomRight,
   careerHero,
 } from "./assets";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -54,12 +55,12 @@ export default function Hero() {
                   borderRadius={"1rem"}
                   overflow={"clip"}
                 >
-                  <img
-                    src={topLeft.src}
+                  <Image
+                    src={topLeft}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
                     style={{
+                      width: "100%",
+                      height: "100%",
                       transform: "scale(1.3)",
                       objectFit: "contain",
                     }}
@@ -74,12 +75,12 @@ export default function Hero() {
                   borderRadius={"1rem"}
                   overflow={"clip"}
                 >
-                  <img
-                    src={topRight.src}
+                  <Image
+                    src={topRight}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
                     style={{
+                      width: "100%",
+                      height: "100%",
                       transform: "scale(1.3)",
                       objectFit: "contain",
                     }}
@@ -94,12 +95,12 @@ export default function Hero() {
                   borderRadius={"1rem"}
                   overflow={"clip"}
                 >
-                  <img
-                    src={bottomLeft.src}
+                  <Image
+                    src={bottomLeft}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
                     style={{
+                      width: "100%",
+                      height: "100%",
                       transform: "scale(1.3)",
                       objectFit: "contain",
                       objectPosition: "50% 50%",
@@ -116,12 +117,12 @@ export default function Hero() {
                   overflow={"clip"}
                   justifySelf="center"
                 >
-                  <img
-                    src={bottomRight.src}
+                  <Image
+                    src={bottomRight}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
                     style={{
+                      width: "100%",
+                      height: "100%",
                       transform: "scale(1.3)",
                       objectFit: "contain",
                       objectPosition: "50% 50%",
@@ -135,12 +136,12 @@ export default function Hero() {
                 borderRadius={"1rem"}
                 overflow={"clip"}
               >
-                <img
-                  src={careerHero.src}
+                <Image
+                  src={careerHero}
                   alt=""
-                  width={"100%"}
-                  height={"100%"}
                   style={{
+                    width: "100%",
+                    height: "100%",
                     transform: "scale(1.4)",
                     objectFit: "contain",
                     objectPosition: "50% 50%",
@@ -163,12 +164,12 @@ export default function Hero() {
                   borderRadius={"1rem"}
                   overflow={"clip"}
                 >
-                  <img
-                    src={topLeft.src}
+                  <Image
+                    src={topLeft}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
                     style={{
+                      width: "100%",
+                      height: "100%",
                       transform: "scale(1.3)",
                       objectFit: "contain",
                       objectPosition: "50% 50%",
@@ -191,12 +192,12 @@ export default function Hero() {
                 borderRadius={"1rem"}
                 overflow={"clip"}
               >
-                <img
-                  src={topRight.src}
+                <Image
+                  src={topRight}
                   alt=""
-                  width={"100%"}
-                  height={"100%"}
                   style={{
+                    width: "100%",
+                    height: "100%",
                     transform: "scale(1.3)",
                     objectFit: "contain",
                   }}
@@ -216,12 +217,12 @@ export default function Hero() {
                 borderRadius={"1rem"}
                 overflow={"clip"}
               >
-                <img
-                  src={bottomLeft.src}
+                <Image
+                  src={bottomLeft}
                   alt=""
-                  width={"100%"}
-                  height={"100%"}
                   style={{
+                    width: "100%",
+                    height: "100%",
                     transform: "scale(1.3)",
                     objectFit: "contain",
                   }}
@@ -242,12 +243,12 @@ export default function Hero() {
                 borderRadius={"1rem"}
                 overflow={"clip"}
               >
-                <img
-                  src={bottomRight.src}
+                <Image
+                  src={bottomRight}
                   alt=""
-                  width={"100%"}
-                  height={"100%"}
                   style={{
+                    width: "100%",
+                    height: "100%",
                     transform: "scale(1.3)",
                     objectFit: "contain",
                   }}

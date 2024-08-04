@@ -16,6 +16,7 @@ import { RBox, LogoAndTitle } from "globalComponents";
 import { ChevronDownIcon } from "icons";
 import menu from "assets/menu.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   {
@@ -173,7 +174,11 @@ export default function NavBar() {
                   justifyContent: "flex-end",
                 }}
               >
-                <img src={menu.src} width={"100%"} alt="Menu Icon" />
+                <Image
+                  src={menu.src}
+                  alt="Menu Icon"
+                  style={{ width: "100%" }}
+                />
               </Button>
               <Link href="" className="link">
                 Sign in

@@ -234,7 +234,7 @@ export default function Login() {
                         Welcome back
                       </Typography>
                       <Typography color={"#acb3ba"} textAlign={"center"}>
-                        We're so excitied to see you again
+                        We&apos;re so excitied to see you again
                       </Typography>
                       <Form openAlert={openAlert} />
                     </Stack>

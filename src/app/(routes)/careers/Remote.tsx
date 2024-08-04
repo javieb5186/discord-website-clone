@@ -5,6 +5,7 @@ import { RBox } from "globalComponents";
 import { ForwardArrowIcon, BackArrowIcon } from "icons";
 import { styled } from "@mui/material/styles";
 import { remoteImg1 } from "./assets";
+import Image from "next/image";
 
 const StyledFab = styled(Fab)({
   backgroundColor: "rgba(35, 39, 42, .4)",
@@ -26,10 +27,10 @@ export default function Remote() {
       <Stack spacing={"5rem"} my={"5rem"}>
         <Stack textAlign={"center"} className="white-txt">
           <Typography>
-            For all roles, we're hiring people to join us in our beautiful San
-            Francisco office, and for select, indicated positions, we're
-            currently open to having people join our team remotely in these
-            states:
+            For all roles, we&apos;re hiring people to join us in our beautiful
+            San Francisco office, and for select, indicated positions,
+            we&apos;re currently open to having people join our team remotely in
+            these states:
           </Typography>
           <Typography>
             Alabama - Alaska - Arizona - California - Colorado - Connecticut -
@@ -78,12 +79,14 @@ export default function Remote() {
                 className={"animate-img" + (range + 1)}
                 padding={"1rem"}
               >
-                <img
-                  src={remoteImg1.src}
+                <Image
+                  src={remoteImg1}
                   alt=""
-                  width={"100%"}
-                  height={"100%"}
-                  style={{ objectFit: "cover" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
               </Box>
             );

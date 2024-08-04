@@ -45,7 +45,7 @@ export default function Hero() {
               Find your community on Discord
             </Typography>
             <Typography className="white-txt">
-              From gaming, to music, to learning, there's a place for you.
+              From gaming, to music, to learning, there&apos;s a place for you.
             </Typography>
           </Stack>
         </Box>

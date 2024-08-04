@@ -74,7 +74,7 @@ function MainDrawer({ safety, handleSafety, handleDrawer }: Props) {
                     <Stack fontSize={".75rem"} spacing={1}>
                       {links.map(({ text, href }) => {
                         return (
-                          <Link href={href}>
+                          <Link href={href} key={text}>
                             <Typography sx={{ color: "black" }}>
                               {text}
                             </Typography>

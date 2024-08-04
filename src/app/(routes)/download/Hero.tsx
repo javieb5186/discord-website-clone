@@ -4,6 +4,7 @@ import { RBox, SimpleButton } from "globalComponents";
 import { DownloadIcon } from "icons";
 import getActiveDeviceText from "utils/getActiveDeviceText";
 import SvgByDevice from "./SvgByDevice";
+import Image from "next/image";
 
 export default async function Hero() {
   const activeDevice = await getActiveDeviceText();
@@ -100,15 +101,16 @@ export default async function Hero() {
               className="fade-in"
             >
               <Suspense fallback={<div>Loading...</div>}>
-                <img
+                <Image
                   src={SvgByDevice()}
                   alt=""
-                  width={
-                    activeDevice.text.name === "iOS" ||
-                    activeDevice.text.name === "Android"
-                      ? "75%"
-                      : "100%"
-                  }
+                  style={{
+                    width:
+                      activeDevice.text.name === "iOS" ||
+                      activeDevice.text.name === "Android"
+                        ? "75%"
+                        : "100%",
+                  }}
                 />
               </Suspense>
             </Box>

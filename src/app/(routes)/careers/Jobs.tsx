@@ -5,14 +5,11 @@ import { RBox, SimpleButton } from "globalComponents";
 import { ForwardArrowIcon, BackArrowIcon } from "icons";
 import { filters, carousalCards } from "./data";
 import { wave } from "./assets";
+import Image from "next/image";
 
 export default function Jobs() {
   const [activeCard, setActiveCard] = useState(0);
   const [filter, setFilter] = useState(-1);
-
-  const handleFilter = (index: number) => {
-    setFilter(filter);
-  };
 
   let newFilters;
 
@@ -23,7 +20,7 @@ export default function Jobs() {
   return (
     <>
       <Box width={"100%"} height={"7rem"} bgcolor={"whitesmoke"}>
-        <img src={wave.src} alt="" />
+        <Image src={wave} alt="" />
       </Box>
       <RBox bgColor="whitesmoke">
         <Stack spacing={"5rem"}>
@@ -32,7 +29,7 @@ export default function Jobs() {
               component={"h3"}
               fontSize={{ xs: "1.5rem", sm: "2rem", md: "2.5rem", lg: "3rem" }}
             >
-              We'd love to work with someone like you.
+              We&apos;d love to work with someone like you.
             </Typography>
             <Stack>
               <Typography
@@ -179,7 +176,11 @@ export default function Jobs() {
                               <Typography component={"span"}>
                                 {location}
                               </Typography>
-                              <img src={tag.src} width={"36px"} alt="" />
+                              <Image
+                                src={tag}
+                                alt=""
+                                style={{ width: "36px" }}
+                              />
                             </Stack>
                           </Stack>
                         </Box>
@@ -334,12 +335,12 @@ export default function Jobs() {
                           justifyContent={"center"}
                         >
                           <Box width={{ xs: "50%", md: "100%" }} p={"1rem"}>
-                            <img
-                              src={img.src}
+                            <Image
+                              src={img}
                               alt=""
-                              width={"100%"}
-                              height={"100%"}
                               style={{
+                                width: "100%",
+                                height: "100%",
                                 borderRadius: "1rem",
                                 overflow: "clip",
                               }}

@@ -91,7 +91,7 @@ export default function Hero() {
                   </Typography>
                   {menuItems.map(({ title, breadCrumb }) => {
                     return (
-                      <Link href={""}>
+                      <Link href={""} key={title}>
                         <Stack p={"1rem"}>
                           <Typography fontSize={".9rem"} color="primary">
                             {title}

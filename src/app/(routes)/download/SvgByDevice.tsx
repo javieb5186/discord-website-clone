@@ -6,15 +6,15 @@ export default function SvgByDevice() {
   const { isAndroid, isWindows, isMacOs, isIOS } = detectDevice();
 
   const possibleDevices = [
-    { svg: mac.src, active: isMacOs },
-    { svg: windows.src, active: isWindows },
+    { svg: mac, active: isMacOs },
+    { svg: windows, active: isWindows },
     {
-      svg: android.src,
+      svg: android,
       active: isAndroid,
     },
-    { svg: iphone.src, active: isIOS },
+    { svg: iphone, active: isIOS },
     {
-      svg: linux.src,
+      svg: linux,
       active: !isWindows && !isMacOs && !isAndroid && !isIOS,
     },
   ];

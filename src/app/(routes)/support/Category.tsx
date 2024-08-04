@@ -70,7 +70,7 @@ export default function Category() {
               lg: "2rem",
             }}
           >
-            Need help? We've got your back.
+            Need help? We&apos;ve got your back.
           </Typography>
           <LinkInText
             text={

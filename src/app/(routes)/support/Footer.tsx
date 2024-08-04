@@ -2,6 +2,7 @@ import { Box, Stack, Grid } from "@mui/material";
 import { RBox, LogoAndTitle } from "globalComponents";
 import Link from "next/link";
 import { footerDevices, browsers, ios, android, windows, osx } from "./assets";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -30,7 +31,7 @@ export default function Footer() {
           position={"relative"}
           display={{ xs: "none", sm: "block" }}
         >
-          <img src={footerDevices.src} alt="" width={"100%"} />
+          <Image src={footerDevices} alt="" style={{ width: "100%" }} />
           <Box
             position={"absolute"}
             width={"100%"}
@@ -39,7 +40,11 @@ export default function Footer() {
             zIndex={1}
           >
             <Link href="" className="device">
-              <img src={browsers.src} alt="" width={"25%"} height={"25%"} />
+              <Image
+                src={browsers}
+                alt=""
+                style={{ width: "25%", height: " 25%" }}
+              />
             </Link>
           </Box>
           <Box
@@ -50,7 +55,7 @@ export default function Footer() {
             zIndex={4}
           >
             <Link href="" className="device">
-              <img src={ios.src} alt="" width={"5%"} height={"5%"} />
+              <Image src={ios} alt="" style={{ width: "5%", height: "5%" }} />
             </Link>
           </Box>
           <Box
@@ -61,7 +66,11 @@ export default function Footer() {
             zIndex={3}
           >
             <Link href="" className="device">
-              <img src={android.src} alt="" width={"5%"} height={"5%"} />
+              <Image
+                src={android}
+                alt=""
+                style={{ width: "5%", height: "5%" }}
+              />
             </Link>
           </Box>
           <Box
@@ -72,13 +81,15 @@ export default function Footer() {
             zIndex={5}
           >
             <Link href="" className="device">
-              <img src={windows.src} alt="" width={"7%"} height={"7%"} />
-              <img
-                src={osx.src}
+              <Image
+                src={windows}
                 alt=""
-                width={"7%"}
-                height={"7%"}
-                style={{ marginLeft: "1rem" }}
+                style={{ width: "7%", height: "7%" }}
+              />
+              <Image
+                src={osx}
+                alt=""
+                style={{ marginLeft: "1rem", width: "7%", height: "7%" }}
               />
             </Link>
           </Box>
@@ -101,7 +112,7 @@ export default function Footer() {
               <Link href={""}>
                 Jobs -{" "}
                 <Box component={"span"} sx={{ color: "#3BA55C" }}>
-                  We're hiring
+                  We&apos;re hiring
                 </Box>
               </Link>
               <Link href={""}>Blog</Link>

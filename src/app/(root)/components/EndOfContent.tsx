@@ -20,7 +20,7 @@ export default function EndOfContent() {
       <Stack width={"100%"} justifyContent={"center"} spacing={5}>
         <Box component={"h2"} className="white-txt" textAlign="center">
           <Typography fontSize={{ xs: "1.5rem", sm: "2.25rem", md: "3rem" }}>
-            YOU CAN'T SCROLL ANYMORE.
+            YOU CAN&apos;T SCROLL ANYMORE.
           </Typography>
           <Typography fontSize={{ xs: "1.5rem", sm: "2.25rem", md: "3rem" }}>
             BETTER GO CHAT.

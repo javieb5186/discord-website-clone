@@ -9,13 +9,14 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { RBox, SimpleButton } from "globalComponents";
+import { RBox } from "globalComponents";
 import { mac, windows, linux, iphone, android } from "./assets";
 import detectDevice from "utils/detectDevice";
 import { PropsWithChildren } from "react";
 import LinuxButton from "./LinuxButton";
 import ExperimentButton from "./ExperimentButton";
 import ArchiveButton from "./ArchiveButton";
+import Image from "next/image";
 
 interface Device {
   id: number;
@@ -60,28 +61,28 @@ export default async function DownloadContent() {
     {
       id: 1,
       title: "iOS",
-      svg: iphone.src,
+      svg: iphone,
       active: isIOS,
     },
     {
       id: 2,
       title: "Android",
-      svg: android.src,
+      svg: android,
       active: isAndroid,
     },
     {
       id: 3,
       title: "Linux",
-      svg: linux.src,
+      svg: linux,
       MenuButton: <LinuxButton />,
       downloadTypes: true,
       active: !isWindows && !isMacOs && !isAndroid && !isIOS,
     },
-    { id: 4, title: "Mac", svg: mac.src, active: isMacOs },
+    { id: 4, title: "Mac", svg: mac, active: isMacOs },
     {
       id: 5,
       title: "Windows",
-      svg: windows.src,
+      svg: windows,
       active: isWindows,
     },
   ];
@@ -160,7 +161,9 @@ export default async function DownloadContent() {
                           justifyContent: "center",
                         }}
                       >
-                        {svg && <img src={svg} alt="" width={"100%"} />}
+                        {svg && (
+                          <Image src={svg} alt="" style={{ width: "100%" }} />
+                        )}
                       </CardMedia>
                     </Stack>
                   </CardContent>
@@ -257,7 +260,11 @@ export default async function DownloadContent() {
                                   }}
                                 >
                                   {svg && (
-                                    <img src={svg} alt="" width={"100%"} />
+                                    <Image
+                                      src={svg}
+                                      alt=""
+                                      style={{ width: "100%" }}
+                                    />
                                   )}
                                 </CardMedia>
                               </Stack>

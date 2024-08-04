@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Box,
   Stack,
@@ -25,7 +25,8 @@ import {
   ScienceTechIcon,
   MusicIcon,
 } from "./svgs";
-import DataStack from "./DataStack";
+import GetFilteredComponents from "./DataStack";
+import Skeleton from "./Skeleton";
 
 const categories = [
   {
@@ -93,6 +94,12 @@ export default function Communities() {
     setDialog(!dialog);
   };
 
+  const [DataStack, setDataStack] = useState<JSX.Element[] | undefined>();
+
+  useEffect(() => {
+    setDataStack(GetFilteredComponents(category, page));
+  }, [category, page]);
+
   return (
     <RBox bgColor="white">
       <Box
@@ -135,7 +142,7 @@ export default function Communities() {
               </Box>
               {value.length >= 2 && (
                 <Typography width="20%" fontSize=".9rem">
-                  "ENTER" to Search
+                  &quot;ENTER&quot; to Search
                 </Typography>
               )}
               {!!value.length && (
@@ -266,7 +273,7 @@ export default function Communities() {
               >
                 {categories[category - 1].results} found
               </Typography>
-              <DataStack category={category} page={page} />
+              {DataStack ? DataStack : <Skeleton />}
             </Stack>
           </Stack>
           <Box display="flex" justifyContent="center">

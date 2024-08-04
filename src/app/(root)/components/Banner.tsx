@@ -23,7 +23,12 @@ export default function Banner() {
         {Array.from({ length: 4 }).map(() => {
           return bannerText.map((text) => {
             return (
-              <Typography fontSize={"3rem"} className="white-txt" noWrap>
+              <Typography
+                key={text}
+                fontSize={"3rem"}
+                className="white-txt"
+                noWrap
+              >
                 {text}
               </Typography>
             );

@@ -10,6 +10,7 @@ import {
   charter,
   parent,
 } from "./assets";
+import Image from "next/image";
 
 const cards = [
   {
@@ -101,11 +102,14 @@ export default function Content() {
                 alignContent={"center"}
               >
                 <Box width={"100%"}>
-                  <img
+                  <Image
                     src={svg.src}
                     alt={alt}
-                    width={"100%"}
-                    style={{ borderRadius: "1rem", overflow: "clip" }}
+                    style={{
+                      width: "100%",
+                      borderRadius: "1rem",
+                      overflow: "clip",
+                    }}
                   />
                 </Box>
               </Grid>

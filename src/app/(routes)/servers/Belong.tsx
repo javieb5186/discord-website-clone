@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { RBox, SimpleButton } from "globalComponents";
 import channels from "./assets/belong.svg";
+import Image from "next/image";
 
 export default function Belong() {
   return (
@@ -58,7 +59,7 @@ export default function Belong() {
           width={{ xs: "100%", lg: "60%" }}
           order={{ xs: 1, lg: 2 }}
         >
-          <img src={channels.src} style={{ width: "100%" }} />
+          <Image src={channels} alt="" style={{ width: "100%" }} />
         </Box>
       </Stack>
     </RBox>

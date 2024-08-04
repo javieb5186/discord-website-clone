@@ -1,6 +1,7 @@
 import { Box, Stack, Typography, Grid } from "@mui/material";
 import { RBox, LinkInText } from "globalComponents";
 import { intership1, intership2, intership3, intershipFooter } from "./assets";
+import Image from "next/image";
 
 const cardText = {
   text: "Join us for an unforgettable summer at Discord! You’ll be working on real features that impact millions of people, receive close mentorship, and learn from leaders in the industry. We are looking for undergraduate and graduate students of all levels. Check out our listings, and read more about our program.",
@@ -87,24 +88,34 @@ export default function Internships() {
           </Grid>
           <Grid item xs={12} md>
             <Box width={"100%"} borderRadius={"1rem"} overflow={"clip"}>
-              <img
-                src={intership1.src}
+              <Image
+                src={intership1}
                 alt=""
-                width={"100%"}
-                height={"100%"}
-                style={{ transform: "scale(1.1)" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  transform: "scale(1.1)",
+                }}
               />
             </Box>
           </Grid>
         </Grid>
-        <Grid container columnGap={"2rem"} rowSpacing={"2rem"}>
+        <Grid
+          container
+          columnGap={"2rem"}
+          rowSpacing={"2rem"}
+          alignItems={"center"}
+        >
           <Grid item xs={12} md order={{ xs: 2, md: 1 }}>
             <Box width={"100%"} borderRadius={"1rem"} overflow={"clip"}>
-              <img
-                src={intership2.src}
+              <Image
+                src={intership2}
                 alt=""
-                width={"100%"}
-                style={{ transform: "scale(1.1)" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  transform: "scale(1.1)",
+                }}
               />
             </Box>
           </Grid>
@@ -123,10 +134,10 @@ export default function Internships() {
               </Typography>
               <Typography>
                 Imagine a workplace where everyone belongs. At Discord, we
-                aren't just imagining this place, we’re creating it. We’re
-                building an inclusive, diverse, and welcoming space that
-                reflects the world we live, play, and work in — because we know
-                that with diversity comes better ideas, a better product, a
+                aren&apos;t just imagining this place, we&apos;re creating it.
+                We&apos;re building an inclusive, diverse, and welcoming space
+                that reflects the world we live, play, and work in — because we
+                know that with diversity comes better ideas, a better product, a
                 better work environment, and ultimately a better company.
               </Typography>
             </Stack>
@@ -166,11 +177,14 @@ export default function Internships() {
             </Grid>
             <Grid item xs={12} md>
               <Box width={"100%"} borderRadius={"1rem"} overflow={"clip"}>
-                <img
-                  src={intership3.src}
+                <Image
+                  src={intership3}
                   alt=""
-                  width={"100%"}
-                  style={{ transform: "scale(1.1)" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    transform: "scale(1.1)",
+                  }}
                 />
               </Box>
             </Grid>
@@ -189,11 +203,10 @@ export default function Internships() {
             width={"100%"}
             height={"5rem"}
           >
-            <img
-              src={intershipFooter.src}
-              width={"100%"}
-              height={"100%"}
+            <Image
+              src={intershipFooter}
               alt=""
+              style={{ width: "100%", height: "100%", transform: "scale(1.1)" }}
             />
           </Box>
           <Typography

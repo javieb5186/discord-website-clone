@@ -2,6 +2,7 @@ import { Typography, Stack, Grid } from "@mui/material";
 import { RBox } from "globalComponents";
 import { list } from "./data";
 import { discordLife } from "./assets";
+import Image from "next/image";
 
 export default function DiscordLife() {
   return (
@@ -16,7 +17,7 @@ export default function DiscordLife() {
           {list.map(({ title, body }, index) => {
             return (
               <Grid key={title} item xs={12} sm={6} lg={4}>
-                <img src={discordLife.src} alt="" />
+                <Image src={discordLife} alt="" />
                 <Typography
                   fontSize={{
                     xs: "1.1rem",
