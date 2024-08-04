@@ -36,8 +36,8 @@ export default function LinkInText({
   let orderedText: OrderedText[] = [];
 
   links.forEach(({ link }, index) => {
-    linkStartIndex = nextText.indexOf(`${link}`);
-    linkLastIndex = nextText.indexOf(`${link}`) + link.length;
+    linkStartIndex = nextText.indexOf(link);
+    linkLastIndex = nextText.indexOf(link) + link.length;
     const linkCutout = nextText.slice(linkStartIndex, linkLastIndex);
 
     let regularText = nextText.slice(0, linkStartIndex);

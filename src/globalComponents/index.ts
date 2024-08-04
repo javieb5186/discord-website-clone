@@ -4,6 +4,7 @@ import { RBox } from "./RBox";
 import { SimpleButton } from "./SimpleButton";
 import { LeftAlignedButton } from "./LeftAlignedButton";
 import LinkInText from "./LinkInText";
+import LogoAndTitle from "./LogoAndTitle";
 
 export {
   LinkButton,
@@ -12,4 +13,5 @@ export {
   SimpleButton,
   LeftAlignedButton,
   LinkInText,
+  LogoAndTitle,
 };

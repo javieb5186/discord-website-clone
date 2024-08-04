@@ -7,8 +7,6 @@ import "./globals.css";
 import theme from "utils/theme";
 import Script from "next/script";
 
-console.log(theme);
-
 // Font from Google
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +32,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
           {/* Check out ./theme.ts to see theme in it's entirety */}
         </AppRouterCacheProvider>
+        {/* Script is for SSE */}
         <Script id="id" src="./htmx.min.js" />
       </body>
     </html>
