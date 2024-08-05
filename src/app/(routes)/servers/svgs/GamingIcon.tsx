@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import Icon from "icons/Icon";
+import Icon from "ts/interfaces/Icon";
 export default function GamingIcon({
   width,
   height,

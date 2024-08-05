@@ -83,10 +83,9 @@ function createStack(data: Data[]) {
                   <Typography component="span" sx={{ display: "inline" }}>
                     {tag === "PARTNERED" ? (
                       <Stack direction="row" spacing={1}>
-                        <PartneredIcon
-                          width={{ xs: ".8rem", lg: "1rem" }}
-                          color="#5764f3"
-                        />
+                        <Box width={{ xs: ".8rem", lg: "1rem" }}>
+                          <PartneredIcon width="100%" color="#5764f3" />
+                        </Box>
                         <Box
                           component="span"
                           fontSize={{ xs: ".8rem", lg: "1rem" }}
@@ -96,10 +95,9 @@ function createStack(data: Data[]) {
                       </Stack>
                     ) : (
                       <Stack direction="row" spacing={1}>
-                        <VerifiedIcon
-                          width={{ xs: ".8rem", lg: "1rem" }}
-                          color="#23a55a"
-                        />
+                        <Box width={{ xs: ".8rem", lg: "1rem" }}>
+                          <VerifiedIcon width="100%" color="#23a55a" />
+                        </Box>
                         <Box
                           component="span"
                           fontSize={{ xs: ".8rem", lg: "1rem" }}
