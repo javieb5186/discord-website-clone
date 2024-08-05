@@ -1,3 +1,5 @@
+// Detect Device from server side
+
 import { headers } from "next/headers";
 import { getSelectorsByUserAgent } from "react-device-detect";
 

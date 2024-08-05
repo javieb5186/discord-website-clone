@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   const res = await request.text();
-  console.log(res);
   const className = res.slice(0, res.length - 1);
   const name = className.includes("download-hide-menu")
     ? "download-show-menu"

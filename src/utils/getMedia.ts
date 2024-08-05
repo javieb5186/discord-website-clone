@@ -4,7 +4,7 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
 import theme from "./theme";
 
-export default function getMedia() {
+export default function useMedia() {
   const mobile = useMediaQuery(theme.breakpoints.up("xs"));
   const tablet = useMediaQuery(theme.breakpoints.up("sm"));
   const laptop = useMediaQuery(theme.breakpoints.up("md"));
