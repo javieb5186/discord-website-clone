@@ -10,7 +10,6 @@ import {
   charter,
   parent,
 } from "./assets";
-import Image from "next/image";
 
 const cards = [
   {
@@ -102,7 +101,7 @@ export default function Content() {
                 alignContent={"center"}
               >
                 <Box width={"100%"}>
-                  <Image
+                  <img
                     src={svg.src}
                     alt={alt}
                     style={{

@@ -46,13 +46,6 @@ function Form({ openAlert }: Props) {
 
     validPassword = passwordRegex.test(password);
 
-    console.log(emailPhone);
-    console.log(password);
-
-    console.log("Valid Email? ", validEmail);
-    console.log("Valid Phone? ", validPhone);
-    console.log("Valid Password? ", validPassword);
-
     const validLogin = validEmail || validPhone;
 
     const success = validLogin && validPassword;
