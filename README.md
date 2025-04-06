@@ -1,67 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Discord Website Clone
 
-# Getting Started
+A responsive, animated clone of the Discord **marketing website** (not the app), built with [Next.js](https://nextjs.org/) and [MUI](https://mui.com/).  
+This project showcases complex CSS implementation, depth layering with smart z-indexing, smooth scroll-based animations, video integration, and mobile responsiveness.
 
-First, run the development server:
+## Purpose
+
+The main purpose of this project was to explore complex, beautiful CSS patterns I hadn’t worked with before.  
+Other goals were to improve my skills with TypeScript and experiment with new libraries in a realistic frontend setting.
+
+## Highlights
+
+- **Next.js for Performance & Routing**: Uses Next.js for fast rendering, route-based code splitting, and SEO-friendly architecture.
+- **Complex Custom CSS**: Manually crafted layered layouts, fine-tuned responsiveness, and precise animations using plain CSS with MUI.
+- **Basic Login System**: Simulates authentication flow with reusable UI components.
+- **Animations & Transitions**: Scroll-triggered animations and fluid UI transitions.
+- **Custom Carousel**: Fully custom-built React carousel (not from a library), with smooth transitions and responsiveness.
+- **Device Detection**: Leverages `react-device-detect` to tailor user experiences based on device type (e.g., rendering different layouts or interactions for mobile vs. desktop).
+- **Smart Z-Indexing**: Layered components for visual hierarchy and depth.
+- **Fully Responsive**: Optimized for desktop and mobile with flexible layouts.
+- **Multimedia Integration**: Videos and images to match the feel of the original Discord site.
+
+## Getting Started
+
+To install this application you need
+[Node JS 18.7 or above](https://nodejs.org/en/download/)
+
+1. Clone the repository:
+
+```bash
+ git clone https://github.com/javieb5186/discord-website-clone.git
+```
+
+2. Download and run in terminal:
+
+```bash
+npm i
+```
+
+3. After successful installation, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+4. Or you can build and run it with
+
+```bash
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Follows the Next.js project structure with enhancements based on React best practices:
 
-# Git Branch Naming Convention
+- Component-based folder organization
 
-The branch naming rules in this project is following a guide from [medium.com](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534) by Abhay Amin
+- Custom hooks and reusable UI modules
 
-### Basic Rules
+- Absolute imports for cleaner code
 
-- Lowercase and Hyphen-separated
-- Alphanumeric Characters
-- No Continuous Hyphens
-- No Trailing Hyphens
-- Descriptive
+- Business logic separated from presentation
 
-### Branch Prefix Names
+## Git Branch Naming Convention
 
-- feature
-- bugfix
-- hotfix
-- release
-- docs
+Following this guide:
 
-### Examples
+- Use lowercase and hyphens
 
-- feature/login-system
-- bugfix/header-styling
-- hotfix/critical-security-issue
-- release/v1.0.1
-- docs/api-endpoints
+- Prefixes: feature/, bugfix/, hotfix/, release/, docs/
 
-# Project File Structure
+- Examples:
 
-The project structure will follow [nextjs](https://nextjs.org/docs/getting-started/project-structure) official documention project structure.
+  - feature/hero-animation
 
-It will follow React JS guide second by [medium.com](https://medium.com/@kthamodaran/react-8-best-practices-folder-structure-5dbda48a69e) by Thamodaran.
+  - bugfix/zindex-layering
 
-### React JS Convention
+  - release/v1.0.0
 
-The following convention will be used from Thamodarans guide...
+## License
 
-- Feature/Component Centric
-- Focus on common modules
-- Add custom components in folders
-- Create custom hooks
-- Use absolute imports
-- Avoid a single context for everything
-- Seperate business logic from UI
+This project is licensed under the [MIT License](LICENSE).
