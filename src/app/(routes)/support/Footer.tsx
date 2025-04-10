@@ -31,7 +31,11 @@ export default function Footer() {
           position={"relative"}
           display={{ xs: "none", sm: "block" }}
         >
-          <Image src={footerDevices} alt="" style={{ width: "100%" }} />
+          <Image
+            src={footerDevices}
+            alt=""
+            style={{ width: "100%", height: "auto" }}
+          />
           <Box
             position={"absolute"}
             width={"100%"}
@@ -40,10 +44,10 @@ export default function Footer() {
             zIndex={1}
           >
             <Link href="" className="device">
-              <Image
-                src={browsers}
+              <img
+                src={"icon-browsers.svg"}
                 alt=""
-                style={{ width: "25%", height: " 25%" }}
+                style={{ width: "25%", height: "25%" }}
               />
             </Link>
           </Box>
@@ -55,7 +59,11 @@ export default function Footer() {
             zIndex={4}
           >
             <Link href="" className="device">
-              <Image src={ios} alt="" style={{ width: "5%", height: "5%" }} />
+              <img
+                src={"icon-ios.svg"}
+                alt=""
+                style={{ width: "5%", height: "5%" }}
+              />
             </Link>
           </Box>
           <Box
@@ -66,8 +74,8 @@ export default function Footer() {
             zIndex={3}
           >
             <Link href="" className="device">
-              <Image
-                src={android}
+              <img
+                src={"icon-android.svg"}
                 alt=""
                 style={{ width: "5%", height: "5%" }}
               />
@@ -81,13 +89,13 @@ export default function Footer() {
             zIndex={5}
           >
             <Link href="" className="device">
-              <Image
-                src={windows}
+              <img
+                src={"icon-windows.svg"}
                 alt=""
                 style={{ width: "7%", height: "7%" }}
               />
-              <Image
-                src={osx}
+              <img
+                src={"icon-osx.svg"}
                 alt=""
                 style={{ marginLeft: "1rem", width: "7%", height: "7%" }}
               />

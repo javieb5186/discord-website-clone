@@ -1,7 +1,5 @@
 import { Box, Typography, Stack } from "@mui/material";
 import { RBox, LinkInText } from "globalComponents";
-import { categoryIcon } from "./assets";
-import Image from "next/image";
 
 const cards = [
   {
@@ -100,7 +98,11 @@ export default function Category() {
                 textAlign={"center"}
               >
                 <Box width={"6rem"} height={"6rem"} position={"relative"}>
-                  <Image src={categoryIcon} alt="" sizes="25vw" fill />
+                  <img
+                    src={"category-icon.svg"}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                 </Box>
                 <Typography color={"primary"} fontSize={"1.1rem"}>
                   {title}
@@ -141,7 +143,11 @@ export default function Category() {
                 textAlign={"center"}
               >
                 <Box width={"6rem"} height={"6rem"} position={"relative"}>
-                  <Image src={categoryIcon} alt="" sizes="25vw" fill />
+                  <img
+                    src={"category-icon.svg"}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                 </Box>
                 <Typography color={"primary"} fontSize={"1.1rem"}>
                   {title}
