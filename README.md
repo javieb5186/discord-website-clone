@@ -20,6 +20,20 @@ Other goals were to improve my skills with TypeScript and experiment with new li
 - **Fully Responsive**: Optimized for desktop and mobile with flexible layouts.
 - **Multimedia Integration**: Videos and images to match the feel of the original Discord site.
 
+## Quick Gifs
+
+Desktop view of the main page:
+
+![discord-desktop-preview](https://github.com/user-attachments/assets/a1e15e37-8e6b-4708-8fd2-c150aa20e77f)
+
+Tablet view for one of the routes:
+
+![discord-tablet-preview](https://github.com/user-attachments/assets/7acb1929-1a2b-41b0-a26f-2477f0a47669)
+
+Mobile view for one of the routes:
+
+![discord-mobile-preview](https://github.com/user-attachments/assets/dcb57356-53ca-4034-ae70-d3e2bf596403)
+
 ## Getting Started
 
 To install this application you need
