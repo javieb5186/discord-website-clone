@@ -3,6 +3,11 @@
 A responsive, animated clone of the Discord **marketing website** (not the app), built with [Next.js](https://nextjs.org/) and [MUI](https://mui.com/).  
 This project showcases complex CSS implementation, depth layering with smart z-indexing, smooth scroll-based animations, video integration, and mobile responsiveness.
 
+## Disclaimer
+
+> This project is for educational purposes only.  
+> Please support the original Discord website at [offerup.com](https://offerup.com/).
+
 ## Purpose
 
 The main purpose of this project was to explore complex, beautiful CSS patterns I hadn’t worked with before.  
