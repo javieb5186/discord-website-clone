@@ -6,7 +6,7 @@ This project showcases complex CSS implementation, depth layering with smart z-i
 ## Disclaimer
 
 > This project is for educational purposes only.  
-> Please support the original Discord website at [offerup.com](https://offerup.com/).
+> Please support the original Discord website at [offerup.com](https://discord.com/).
 
 ## Purpose
 
