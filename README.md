@@ -3,6 +3,8 @@
 A responsive, animated clone of the Discord **marketing website** (not the app), built with [Next.js](https://nextjs.org/) and [MUI](https://mui.com/).  
 This project showcases complex CSS implementation, depth layering with smart z-indexing, smooth scroll-based animations, video integration, and mobile responsiveness.
 
+Checkout live website: [Discord Clone Vercel App](https://discord-website-clone-gray.vercel.app/)
+
 ## Disclaimer
 
 > This project is for educational purposes only.  
